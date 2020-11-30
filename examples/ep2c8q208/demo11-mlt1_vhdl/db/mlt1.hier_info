@@ -1,0 +1,15 @@
+|mlt1
+a[0] => Mult0.IN1
+a[1] => Mult0.IN0
+b[0] => Mult0.IN3
+b[1] => Mult0.IN2
+c[0] <= <VCC>
+c[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+c[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+c[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+c[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+c[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+c[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+c[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

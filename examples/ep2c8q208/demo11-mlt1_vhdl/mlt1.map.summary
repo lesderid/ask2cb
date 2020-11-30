@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Oct 26 09:17:03 2010
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Full Version
+Revision Name : mlt1
+Top-level Entity Name : mlt1
+Family : Cyclone II
+Total logic elements : 7
+    Total combinational functions : 7
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 12
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

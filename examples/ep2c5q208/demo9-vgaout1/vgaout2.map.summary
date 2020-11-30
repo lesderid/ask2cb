@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Aug 17 02:18:02 2010
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Full Version
+Revision Name : vgaout2
+Top-level Entity Name : vgaout2
+Family : Cyclone II
+Total logic elements : 62
+    Total combinational functions : 55
+    Dedicated logic registers : 38
+Total registers : 38
+Total pins : 11
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

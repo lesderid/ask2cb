@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Oct 26 09:20:02 2010
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Full Version
+Revision Name : mlt
+Top-level Entity Name : mlt
+Family : Cyclone II
+Device : EP2C8Q208C8
+Timing Models : Final
+Total logic elements : 7 / 8,256 ( < 1 % )
+    Total combinational functions : 7 / 8,256 ( < 1 % )
+    Dedicated logic registers : 0 / 8,256 ( 0 % )
+Total registers : 0
+Total pins : 13 / 138 ( 9 % )
+Total virtual pins : 0
+Total memory bits : 0 / 165,888 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 36 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Mar 10 15:00:39 2011
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Full Version
+Revision Name : dp1_pattern
+Top-level Entity Name : dp1_pattern
+Family : Cyclone II
+Total logic elements : 196
+    Total combinational functions : 169
+    Dedicated logic registers : 142
+Total registers : 142
+Total pins : 45
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

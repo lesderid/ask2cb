@@ -1,0 +1,469 @@
+Classic Timing Analyzer report for dp1_pattern
+Thu Mar 10 15:00:28 2011
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'CLOCK_50'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                   ;
++------------------------------+-------+---------------+----------------------------------+------------------------------------+-------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                               ; To                                  ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+------------------------------------+-------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 6.085 ns                         ; GPIO[39]                           ; adc_spi_controller:u4|transmit_en   ; --         ; CLOCK_50 ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 12.551 ns                        ; lcd_timing_controller:u6|oLCD_R[7] ; GPIO[9]                             ; CLOCK_50   ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -5.234 ns                        ; GPIO[39]                           ; adc_spi_controller:u4|d1_PENIRQ_n   ; --         ; CLOCK_50 ; 0            ;
+; Clock Setup: 'CLOCK_50'      ; N/A   ; None          ; 183.99 MHz ( period = 5.435 ns ) ; lcd_timing_controller:u6|x_cnt[2]  ; lcd_timing_controller:u6|green_1[5] ; CLOCK_50   ; CLOCK_50 ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                    ;                                     ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+------------------------------------+-------------------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C8Q208C8        ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLOCK_50        ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLOCK_50'                                                                                                                                                                                                                                                              ;
++-----------------------------------------+-----------------------------------------------------+------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                               ; To                                  ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 183.99 MHz ( period = 5.435 ns )                    ; lcd_timing_controller:u6|x_cnt[2]  ; lcd_timing_controller:u6|red_1[5]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.160 ns                ;
+; N/A                                     ; 183.99 MHz ( period = 5.435 ns )                    ; lcd_timing_controller:u6|x_cnt[2]  ; lcd_timing_controller:u6|green_1[0] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.160 ns                ;
+; N/A                                     ; 183.99 MHz ( period = 5.435 ns )                    ; lcd_timing_controller:u6|x_cnt[2]  ; lcd_timing_controller:u6|green_1[1] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.160 ns                ;
+; N/A                                     ; 183.99 MHz ( period = 5.435 ns )                    ; lcd_timing_controller:u6|x_cnt[2]  ; lcd_timing_controller:u6|green_1[2] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.160 ns                ;
+; N/A                                     ; 183.99 MHz ( period = 5.435 ns )                    ; lcd_timing_controller:u6|x_cnt[2]  ; lcd_timing_controller:u6|green_1[5] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.160 ns                ;
+; N/A                                     ; 184.20 MHz ( period = 5.429 ns )                    ; lcd_timing_controller:u6|x_cnt[4]  ; lcd_timing_controller:u6|red_1[5]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.155 ns                ;
+; N/A                                     ; 184.20 MHz ( period = 5.429 ns )                    ; lcd_timing_controller:u6|x_cnt[4]  ; lcd_timing_controller:u6|green_1[0] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.155 ns                ;
+; N/A                                     ; 184.20 MHz ( period = 5.429 ns )                    ; lcd_timing_controller:u6|x_cnt[4]  ; lcd_timing_controller:u6|green_1[1] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.155 ns                ;
+; N/A                                     ; 184.20 MHz ( period = 5.429 ns )                    ; lcd_timing_controller:u6|x_cnt[4]  ; lcd_timing_controller:u6|green_1[2] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.155 ns                ;
+; N/A                                     ; 184.20 MHz ( period = 5.429 ns )                    ; lcd_timing_controller:u6|x_cnt[4]  ; lcd_timing_controller:u6|green_1[5] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.155 ns                ;
+; N/A                                     ; 184.57 MHz ( period = 5.418 ns )                    ; lcd_timing_controller:u6|x_cnt[2]  ; lcd_timing_controller:u6|blue_1[0]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.156 ns                ;
+; N/A                                     ; 184.57 MHz ( period = 5.418 ns )                    ; lcd_timing_controller:u6|x_cnt[2]  ; lcd_timing_controller:u6|blue_1[1]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.156 ns                ;
+; N/A                                     ; 184.57 MHz ( period = 5.418 ns )                    ; lcd_timing_controller:u6|x_cnt[2]  ; lcd_timing_controller:u6|blue_1[2]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.156 ns                ;
+; N/A                                     ; 184.57 MHz ( period = 5.418 ns )                    ; lcd_timing_controller:u6|x_cnt[2]  ; lcd_timing_controller:u6|blue_1[3]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.156 ns                ;
+; N/A                                     ; 184.57 MHz ( period = 5.418 ns )                    ; lcd_timing_controller:u6|x_cnt[2]  ; lcd_timing_controller:u6|blue_1[4]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.156 ns                ;
+; N/A                                     ; 184.57 MHz ( period = 5.418 ns )                    ; lcd_timing_controller:u6|x_cnt[2]  ; lcd_timing_controller:u6|blue_1[5]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.156 ns                ;
+; N/A                                     ; 184.77 MHz ( period = 5.412 ns )                    ; lcd_timing_controller:u6|x_cnt[4]  ; lcd_timing_controller:u6|blue_1[0]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.151 ns                ;
+; N/A                                     ; 184.77 MHz ( period = 5.412 ns )                    ; lcd_timing_controller:u6|x_cnt[4]  ; lcd_timing_controller:u6|blue_1[1]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.151 ns                ;
+; N/A                                     ; 184.77 MHz ( period = 5.412 ns )                    ; lcd_timing_controller:u6|x_cnt[4]  ; lcd_timing_controller:u6|blue_1[2]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.151 ns                ;
+; N/A                                     ; 184.77 MHz ( period = 5.412 ns )                    ; lcd_timing_controller:u6|x_cnt[4]  ; lcd_timing_controller:u6|blue_1[3]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.151 ns                ;
+; N/A                                     ; 184.77 MHz ( period = 5.412 ns )                    ; lcd_timing_controller:u6|x_cnt[4]  ; lcd_timing_controller:u6|blue_1[4]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.151 ns                ;
+; N/A                                     ; 184.77 MHz ( period = 5.412 ns )                    ; lcd_timing_controller:u6|x_cnt[4]  ; lcd_timing_controller:u6|blue_1[5]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.151 ns                ;
+; N/A                                     ; 185.77 MHz ( period = 5.383 ns )                    ; lcd_timing_controller:u6|x_cnt[0]  ; lcd_timing_controller:u6|red_1[5]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.108 ns                ;
+; N/A                                     ; 185.77 MHz ( period = 5.383 ns )                    ; lcd_timing_controller:u6|x_cnt[0]  ; lcd_timing_controller:u6|green_1[0] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.108 ns                ;
+; N/A                                     ; 185.77 MHz ( period = 5.383 ns )                    ; lcd_timing_controller:u6|x_cnt[0]  ; lcd_timing_controller:u6|green_1[1] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.108 ns                ;
+; N/A                                     ; 185.77 MHz ( period = 5.383 ns )                    ; lcd_timing_controller:u6|x_cnt[0]  ; lcd_timing_controller:u6|green_1[2] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.108 ns                ;
+; N/A                                     ; 185.77 MHz ( period = 5.383 ns )                    ; lcd_timing_controller:u6|x_cnt[0]  ; lcd_timing_controller:u6|green_1[5] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.108 ns                ;
+; N/A                                     ; 186.36 MHz ( period = 5.366 ns )                    ; lcd_timing_controller:u6|x_cnt[0]  ; lcd_timing_controller:u6|blue_1[0]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.104 ns                ;
+; N/A                                     ; 186.36 MHz ( period = 5.366 ns )                    ; lcd_timing_controller:u6|x_cnt[0]  ; lcd_timing_controller:u6|blue_1[1]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.104 ns                ;
+; N/A                                     ; 186.36 MHz ( period = 5.366 ns )                    ; lcd_timing_controller:u6|x_cnt[0]  ; lcd_timing_controller:u6|blue_1[2]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.104 ns                ;
+; N/A                                     ; 186.36 MHz ( period = 5.366 ns )                    ; lcd_timing_controller:u6|x_cnt[0]  ; lcd_timing_controller:u6|blue_1[3]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.104 ns                ;
+; N/A                                     ; 186.36 MHz ( period = 5.366 ns )                    ; lcd_timing_controller:u6|x_cnt[0]  ; lcd_timing_controller:u6|blue_1[4]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.104 ns                ;
+; N/A                                     ; 186.36 MHz ( period = 5.366 ns )                    ; lcd_timing_controller:u6|x_cnt[0]  ; lcd_timing_controller:u6|blue_1[5]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.104 ns                ;
+; N/A                                     ; 187.09 MHz ( period = 5.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|mdata_in[7]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.077 ns                ;
+; N/A                                     ; 187.09 MHz ( period = 5.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|mdata_in[6]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.077 ns                ;
+; N/A                                     ; 187.09 MHz ( period = 5.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|mdata_in[5]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.077 ns                ;
+; N/A                                     ; 187.09 MHz ( period = 5.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|mdata_in[4]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.077 ns                ;
+; N/A                                     ; 187.09 MHz ( period = 5.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|mdata_in[3]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.077 ns                ;
+; N/A                                     ; 187.09 MHz ( period = 5.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|mdata_in[2]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.077 ns                ;
+; N/A                                     ; 187.09 MHz ( period = 5.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|mdata_in[1]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.077 ns                ;
+; N/A                                     ; 188.32 MHz ( period = 5.310 ns )                    ; lcd_timing_controller:u6|x_cnt[8]  ; lcd_timing_controller:u6|red_1[5]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.036 ns                ;
+; N/A                                     ; 188.32 MHz ( period = 5.310 ns )                    ; lcd_timing_controller:u6|x_cnt[8]  ; lcd_timing_controller:u6|green_1[0] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.036 ns                ;
+; N/A                                     ; 188.32 MHz ( period = 5.310 ns )                    ; lcd_timing_controller:u6|x_cnt[8]  ; lcd_timing_controller:u6|green_1[1] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.036 ns                ;
+; N/A                                     ; 188.32 MHz ( period = 5.310 ns )                    ; lcd_timing_controller:u6|x_cnt[8]  ; lcd_timing_controller:u6|green_1[2] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.036 ns                ;
+; N/A                                     ; 188.32 MHz ( period = 5.310 ns )                    ; lcd_timing_controller:u6|x_cnt[8]  ; lcd_timing_controller:u6|green_1[5] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.036 ns                ;
+; N/A                                     ; 188.93 MHz ( period = 5.293 ns )                    ; lcd_timing_controller:u6|x_cnt[8]  ; lcd_timing_controller:u6|blue_1[0]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.032 ns                ;
+; N/A                                     ; 188.93 MHz ( period = 5.293 ns )                    ; lcd_timing_controller:u6|x_cnt[8]  ; lcd_timing_controller:u6|blue_1[1]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.032 ns                ;
+; N/A                                     ; 188.93 MHz ( period = 5.293 ns )                    ; lcd_timing_controller:u6|x_cnt[8]  ; lcd_timing_controller:u6|blue_1[2]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.032 ns                ;
+; N/A                                     ; 188.93 MHz ( period = 5.293 ns )                    ; lcd_timing_controller:u6|x_cnt[8]  ; lcd_timing_controller:u6|blue_1[3]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.032 ns                ;
+; N/A                                     ; 188.93 MHz ( period = 5.293 ns )                    ; lcd_timing_controller:u6|x_cnt[8]  ; lcd_timing_controller:u6|blue_1[4]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.032 ns                ;
+; N/A                                     ; 188.93 MHz ( period = 5.293 ns )                    ; lcd_timing_controller:u6|x_cnt[8]  ; lcd_timing_controller:u6|blue_1[5]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.032 ns                ;
+; N/A                                     ; 190.11 MHz ( period = 5.260 ns )                    ; lcd_timing_controller:u6|x_cnt[1]  ; lcd_timing_controller:u6|red_1[5]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.986 ns                ;
+; N/A                                     ; 190.11 MHz ( period = 5.260 ns )                    ; lcd_timing_controller:u6|x_cnt[1]  ; lcd_timing_controller:u6|green_1[0] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.986 ns                ;
+; N/A                                     ; 190.11 MHz ( period = 5.260 ns )                    ; lcd_timing_controller:u6|x_cnt[1]  ; lcd_timing_controller:u6|green_1[1] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.986 ns                ;
+; N/A                                     ; 190.11 MHz ( period = 5.260 ns )                    ; lcd_timing_controller:u6|x_cnt[1]  ; lcd_timing_controller:u6|green_1[2] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.986 ns                ;
+; N/A                                     ; 190.11 MHz ( period = 5.260 ns )                    ; lcd_timing_controller:u6|x_cnt[1]  ; lcd_timing_controller:u6|green_1[5] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.986 ns                ;
+; N/A                                     ; 190.73 MHz ( period = 5.243 ns )                    ; lcd_timing_controller:u6|x_cnt[1]  ; lcd_timing_controller:u6|blue_1[0]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.982 ns                ;
+; N/A                                     ; 190.73 MHz ( period = 5.243 ns )                    ; lcd_timing_controller:u6|x_cnt[1]  ; lcd_timing_controller:u6|blue_1[1]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.982 ns                ;
+; N/A                                     ; 190.73 MHz ( period = 5.243 ns )                    ; lcd_timing_controller:u6|x_cnt[1]  ; lcd_timing_controller:u6|blue_1[2]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.982 ns                ;
+; N/A                                     ; 190.73 MHz ( period = 5.243 ns )                    ; lcd_timing_controller:u6|x_cnt[1]  ; lcd_timing_controller:u6|blue_1[3]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.982 ns                ;
+; N/A                                     ; 190.73 MHz ( period = 5.243 ns )                    ; lcd_timing_controller:u6|x_cnt[1]  ; lcd_timing_controller:u6|blue_1[4]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.982 ns                ;
+; N/A                                     ; 190.73 MHz ( period = 5.243 ns )                    ; lcd_timing_controller:u6|x_cnt[1]  ; lcd_timing_controller:u6|blue_1[5]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.982 ns                ;
+; N/A                                     ; 192.98 MHz ( period = 5.182 ns )                    ; lcd_timing_controller:u6|x_cnt[7]  ; lcd_timing_controller:u6|red_1[5]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.908 ns                ;
+; N/A                                     ; 192.98 MHz ( period = 5.182 ns )                    ; lcd_timing_controller:u6|x_cnt[7]  ; lcd_timing_controller:u6|green_1[0] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.908 ns                ;
+; N/A                                     ; 192.98 MHz ( period = 5.182 ns )                    ; lcd_timing_controller:u6|x_cnt[7]  ; lcd_timing_controller:u6|green_1[1] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.908 ns                ;
+; N/A                                     ; 192.98 MHz ( period = 5.182 ns )                    ; lcd_timing_controller:u6|x_cnt[7]  ; lcd_timing_controller:u6|green_1[2] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.908 ns                ;
+; N/A                                     ; 192.98 MHz ( period = 5.182 ns )                    ; lcd_timing_controller:u6|x_cnt[7]  ; lcd_timing_controller:u6|green_1[5] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.908 ns                ;
+; N/A                                     ; 193.61 MHz ( period = 5.165 ns )                    ; lcd_timing_controller:u6|x_cnt[7]  ; lcd_timing_controller:u6|blue_1[0]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.904 ns                ;
+; N/A                                     ; 193.61 MHz ( period = 5.165 ns )                    ; lcd_timing_controller:u6|x_cnt[7]  ; lcd_timing_controller:u6|blue_1[1]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.904 ns                ;
+; N/A                                     ; 193.61 MHz ( period = 5.165 ns )                    ; lcd_timing_controller:u6|x_cnt[7]  ; lcd_timing_controller:u6|blue_1[2]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.904 ns                ;
+; N/A                                     ; 193.61 MHz ( period = 5.165 ns )                    ; lcd_timing_controller:u6|x_cnt[7]  ; lcd_timing_controller:u6|blue_1[3]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.904 ns                ;
+; N/A                                     ; 193.61 MHz ( period = 5.165 ns )                    ; lcd_timing_controller:u6|x_cnt[7]  ; lcd_timing_controller:u6|blue_1[4]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.904 ns                ;
+; N/A                                     ; 193.61 MHz ( period = 5.165 ns )                    ; lcd_timing_controller:u6|x_cnt[7]  ; lcd_timing_controller:u6|blue_1[5]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.904 ns                ;
+; N/A                                     ; 194.10 MHz ( period = 5.152 ns )                    ; Reset_Delay:u3|Cont[9]             ; Reset_Delay:u3|Cont[20]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.898 ns                ;
+; N/A                                     ; 194.10 MHz ( period = 5.152 ns )                    ; Reset_Delay:u3|Cont[9]             ; Reset_Delay:u3|Cont[21]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.898 ns                ;
+; N/A                                     ; 194.10 MHz ( period = 5.152 ns )                    ; Reset_Delay:u3|Cont[9]             ; Reset_Delay:u3|Cont[16]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.898 ns                ;
+; N/A                                     ; 194.10 MHz ( period = 5.152 ns )                    ; Reset_Delay:u3|Cont[9]             ; Reset_Delay:u3|Cont[19]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.898 ns                ;
+; N/A                                     ; 194.10 MHz ( period = 5.152 ns )                    ; Reset_Delay:u3|Cont[9]             ; Reset_Delay:u3|Cont[17]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.898 ns                ;
+; N/A                                     ; 194.10 MHz ( period = 5.152 ns )                    ; Reset_Delay:u3|Cont[9]             ; Reset_Delay:u3|Cont[18]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.898 ns                ;
+; N/A                                     ; 194.10 MHz ( period = 5.152 ns )                    ; Reset_Delay:u3|Cont[9]             ; Reset_Delay:u3|Cont[11]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.898 ns                ;
+; N/A                                     ; 194.10 MHz ( period = 5.152 ns )                    ; Reset_Delay:u3|Cont[9]             ; Reset_Delay:u3|Cont[12]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.898 ns                ;
+; N/A                                     ; 194.10 MHz ( period = 5.152 ns )                    ; Reset_Delay:u3|Cont[9]             ; Reset_Delay:u3|Cont[15]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.898 ns                ;
+; N/A                                     ; 194.10 MHz ( period = 5.152 ns )                    ; Reset_Delay:u3|Cont[9]             ; Reset_Delay:u3|Cont[14]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.898 ns                ;
+; N/A                                     ; 194.10 MHz ( period = 5.152 ns )                    ; Reset_Delay:u3|Cont[9]             ; Reset_Delay:u3|Cont[13]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.898 ns                ;
+; N/A                                     ; 194.48 MHz ( period = 5.142 ns )                    ; lcd_timing_controller:u6|x_cnt[3]  ; lcd_timing_controller:u6|red_1[5]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.867 ns                ;
+; N/A                                     ; 194.48 MHz ( period = 5.142 ns )                    ; lcd_timing_controller:u6|x_cnt[3]  ; lcd_timing_controller:u6|green_1[0] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.867 ns                ;
+; N/A                                     ; 194.48 MHz ( period = 5.142 ns )                    ; lcd_timing_controller:u6|x_cnt[3]  ; lcd_timing_controller:u6|green_1[1] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.867 ns                ;
+; N/A                                     ; 194.48 MHz ( period = 5.142 ns )                    ; lcd_timing_controller:u6|x_cnt[3]  ; lcd_timing_controller:u6|green_1[2] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.867 ns                ;
+; N/A                                     ; 194.48 MHz ( period = 5.142 ns )                    ; lcd_timing_controller:u6|x_cnt[3]  ; lcd_timing_controller:u6|green_1[5] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.867 ns                ;
+; N/A                                     ; 194.55 MHz ( period = 5.140 ns )                    ; lcd_timing_controller:u6|x_cnt[5]  ; lcd_timing_controller:u6|red_1[5]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.866 ns                ;
+; N/A                                     ; 194.55 MHz ( period = 5.140 ns )                    ; lcd_timing_controller:u6|x_cnt[5]  ; lcd_timing_controller:u6|green_1[0] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.866 ns                ;
+; N/A                                     ; 194.55 MHz ( period = 5.140 ns )                    ; lcd_timing_controller:u6|x_cnt[5]  ; lcd_timing_controller:u6|green_1[1] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.866 ns                ;
+; N/A                                     ; 194.55 MHz ( period = 5.140 ns )                    ; lcd_timing_controller:u6|x_cnt[5]  ; lcd_timing_controller:u6|green_1[2] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.866 ns                ;
+; N/A                                     ; 194.55 MHz ( period = 5.140 ns )                    ; lcd_timing_controller:u6|x_cnt[5]  ; lcd_timing_controller:u6|green_1[5] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.866 ns                ;
+; N/A                                     ; 195.12 MHz ( period = 5.125 ns )                    ; lcd_timing_controller:u6|x_cnt[3]  ; lcd_timing_controller:u6|blue_1[0]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.863 ns                ;
+; N/A                                     ; 195.12 MHz ( period = 5.125 ns )                    ; lcd_timing_controller:u6|x_cnt[3]  ; lcd_timing_controller:u6|blue_1[1]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.863 ns                ;
+; N/A                                     ; 195.12 MHz ( period = 5.125 ns )                    ; lcd_timing_controller:u6|x_cnt[3]  ; lcd_timing_controller:u6|blue_1[2]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.863 ns                ;
+; N/A                                     ; 195.12 MHz ( period = 5.125 ns )                    ; lcd_timing_controller:u6|x_cnt[3]  ; lcd_timing_controller:u6|blue_1[3]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.863 ns                ;
+; N/A                                     ; 195.12 MHz ( period = 5.125 ns )                    ; lcd_timing_controller:u6|x_cnt[3]  ; lcd_timing_controller:u6|blue_1[4]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.863 ns                ;
+; N/A                                     ; 195.12 MHz ( period = 5.125 ns )                    ; lcd_timing_controller:u6|x_cnt[3]  ; lcd_timing_controller:u6|blue_1[5]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.863 ns                ;
+; N/A                                     ; 195.20 MHz ( period = 5.123 ns )                    ; lcd_timing_controller:u6|x_cnt[5]  ; lcd_timing_controller:u6|blue_1[0]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.862 ns                ;
+; N/A                                     ; 195.20 MHz ( period = 5.123 ns )                    ; lcd_timing_controller:u6|x_cnt[5]  ; lcd_timing_controller:u6|blue_1[1]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.862 ns                ;
+; N/A                                     ; 195.20 MHz ( period = 5.123 ns )                    ; lcd_timing_controller:u6|x_cnt[5]  ; lcd_timing_controller:u6|blue_1[2]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.862 ns                ;
+; N/A                                     ; 195.20 MHz ( period = 5.123 ns )                    ; lcd_timing_controller:u6|x_cnt[5]  ; lcd_timing_controller:u6|blue_1[3]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.862 ns                ;
+; N/A                                     ; 195.20 MHz ( period = 5.123 ns )                    ; lcd_timing_controller:u6|x_cnt[5]  ; lcd_timing_controller:u6|blue_1[4]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.862 ns                ;
+; N/A                                     ; 195.20 MHz ( period = 5.123 ns )                    ; lcd_timing_controller:u6|x_cnt[5]  ; lcd_timing_controller:u6|blue_1[5]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.862 ns                ;
+; N/A                                     ; 196.19 MHz ( period = 5.097 ns )                    ; lcd_timing_controller:u6|x_cnt[2]  ; lcd_timing_controller:u6|red_1[6]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.834 ns                ;
+; N/A                                     ; 196.19 MHz ( period = 5.097 ns )                    ; lcd_timing_controller:u6|x_cnt[2]  ; lcd_timing_controller:u6|red_1[7]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.834 ns                ;
+; N/A                                     ; 196.19 MHz ( period = 5.097 ns )                    ; lcd_timing_controller:u6|x_cnt[2]  ; lcd_timing_controller:u6|green_1[3] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.834 ns                ;
+; N/A                                     ; 196.19 MHz ( period = 5.097 ns )                    ; lcd_timing_controller:u6|x_cnt[2]  ; lcd_timing_controller:u6|green_1[4] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.834 ns                ;
+; N/A                                     ; 196.19 MHz ( period = 5.097 ns )                    ; lcd_timing_controller:u6|x_cnt[2]  ; lcd_timing_controller:u6|green_1[6] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.834 ns                ;
+; N/A                                     ; 196.19 MHz ( period = 5.097 ns )                    ; lcd_timing_controller:u6|x_cnt[2]  ; lcd_timing_controller:u6|green_1[7] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.834 ns                ;
+; N/A                                     ; 196.19 MHz ( period = 5.097 ns )                    ; lcd_timing_controller:u6|x_cnt[2]  ; lcd_timing_controller:u6|blue_1[6]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.834 ns                ;
+; N/A                                     ; 196.19 MHz ( period = 5.097 ns )                    ; lcd_timing_controller:u6|x_cnt[2]  ; lcd_timing_controller:u6|blue_1[7]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.834 ns                ;
+; N/A                                     ; 196.27 MHz ( period = 5.095 ns )                    ; Reset_Delay:u3|Cont[12]            ; Reset_Delay:u3|Cont[20]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.831 ns                ;
+; N/A                                     ; 196.27 MHz ( period = 5.095 ns )                    ; Reset_Delay:u3|Cont[12]            ; Reset_Delay:u3|Cont[21]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.831 ns                ;
+; N/A                                     ; 196.27 MHz ( period = 5.095 ns )                    ; Reset_Delay:u3|Cont[12]            ; Reset_Delay:u3|Cont[16]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.831 ns                ;
+; N/A                                     ; 196.27 MHz ( period = 5.095 ns )                    ; Reset_Delay:u3|Cont[12]            ; Reset_Delay:u3|Cont[19]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.831 ns                ;
+; N/A                                     ; 196.27 MHz ( period = 5.095 ns )                    ; Reset_Delay:u3|Cont[12]            ; Reset_Delay:u3|Cont[17]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.831 ns                ;
+; N/A                                     ; 196.27 MHz ( period = 5.095 ns )                    ; Reset_Delay:u3|Cont[12]            ; Reset_Delay:u3|Cont[18]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.831 ns                ;
+; N/A                                     ; 196.27 MHz ( period = 5.095 ns )                    ; Reset_Delay:u3|Cont[12]            ; Reset_Delay:u3|Cont[11]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.831 ns                ;
+; N/A                                     ; 196.27 MHz ( period = 5.095 ns )                    ; Reset_Delay:u3|Cont[12]            ; Reset_Delay:u3|Cont[12]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.831 ns                ;
+; N/A                                     ; 196.27 MHz ( period = 5.095 ns )                    ; Reset_Delay:u3|Cont[12]            ; Reset_Delay:u3|Cont[15]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.831 ns                ;
+; N/A                                     ; 196.27 MHz ( period = 5.095 ns )                    ; Reset_Delay:u3|Cont[12]            ; Reset_Delay:u3|Cont[14]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.831 ns                ;
+; N/A                                     ; 196.27 MHz ( period = 5.095 ns )                    ; Reset_Delay:u3|Cont[12]            ; Reset_Delay:u3|Cont[13]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.831 ns                ;
+; N/A                                     ; 196.43 MHz ( period = 5.091 ns )                    ; lcd_timing_controller:u6|x_cnt[4]  ; lcd_timing_controller:u6|red_1[6]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.829 ns                ;
+; N/A                                     ; 196.43 MHz ( period = 5.091 ns )                    ; lcd_timing_controller:u6|x_cnt[4]  ; lcd_timing_controller:u6|red_1[7]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.829 ns                ;
+; N/A                                     ; 196.43 MHz ( period = 5.091 ns )                    ; lcd_timing_controller:u6|x_cnt[4]  ; lcd_timing_controller:u6|green_1[3] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.829 ns                ;
+; N/A                                     ; 196.43 MHz ( period = 5.091 ns )                    ; lcd_timing_controller:u6|x_cnt[4]  ; lcd_timing_controller:u6|green_1[4] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.829 ns                ;
+; N/A                                     ; 196.43 MHz ( period = 5.091 ns )                    ; lcd_timing_controller:u6|x_cnt[4]  ; lcd_timing_controller:u6|green_1[6] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.829 ns                ;
+; N/A                                     ; 196.43 MHz ( period = 5.091 ns )                    ; lcd_timing_controller:u6|x_cnt[4]  ; lcd_timing_controller:u6|green_1[7] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.829 ns                ;
+; N/A                                     ; 196.43 MHz ( period = 5.091 ns )                    ; lcd_timing_controller:u6|x_cnt[4]  ; lcd_timing_controller:u6|blue_1[6]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.829 ns                ;
+; N/A                                     ; 196.43 MHz ( period = 5.091 ns )                    ; lcd_timing_controller:u6|x_cnt[4]  ; lcd_timing_controller:u6|blue_1[7]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.829 ns                ;
+; N/A                                     ; 196.58 MHz ( period = 5.087 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|mdata_in[7]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.819 ns                ;
+; N/A                                     ; 196.58 MHz ( period = 5.087 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|mdata_in[6]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.819 ns                ;
+; N/A                                     ; 196.58 MHz ( period = 5.087 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|mdata_in[5]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.819 ns                ;
+; N/A                                     ; 196.58 MHz ( period = 5.087 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|mdata_in[4]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.819 ns                ;
+; N/A                                     ; 196.58 MHz ( period = 5.087 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|mdata_in[3]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.819 ns                ;
+; N/A                                     ; 196.58 MHz ( period = 5.087 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|mdata_in[2]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.819 ns                ;
+; N/A                                     ; 196.58 MHz ( period = 5.087 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|mdata_in[1]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.819 ns                ;
+; N/A                                     ; 196.62 MHz ( period = 5.086 ns )                    ; lcd_timing_controller:u6|x_cnt[10] ; lcd_timing_controller:u6|red_1[5]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.812 ns                ;
+; N/A                                     ; 196.62 MHz ( period = 5.086 ns )                    ; lcd_timing_controller:u6|x_cnt[10] ; lcd_timing_controller:u6|green_1[0] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.812 ns                ;
+; N/A                                     ; 196.62 MHz ( period = 5.086 ns )                    ; lcd_timing_controller:u6|x_cnt[10] ; lcd_timing_controller:u6|green_1[1] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.812 ns                ;
+; N/A                                     ; 196.62 MHz ( period = 5.086 ns )                    ; lcd_timing_controller:u6|x_cnt[10] ; lcd_timing_controller:u6|green_1[2] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.812 ns                ;
+; N/A                                     ; 196.62 MHz ( period = 5.086 ns )                    ; lcd_timing_controller:u6|x_cnt[10] ; lcd_timing_controller:u6|green_1[5] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.812 ns                ;
+; N/A                                     ; 197.28 MHz ( period = 5.069 ns )                    ; lcd_timing_controller:u6|x_cnt[10] ; lcd_timing_controller:u6|blue_1[0]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.808 ns                ;
+; N/A                                     ; 197.28 MHz ( period = 5.069 ns )                    ; lcd_timing_controller:u6|x_cnt[10] ; lcd_timing_controller:u6|blue_1[1]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.808 ns                ;
+; N/A                                     ; 197.28 MHz ( period = 5.069 ns )                    ; lcd_timing_controller:u6|x_cnt[10] ; lcd_timing_controller:u6|blue_1[2]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.808 ns                ;
+; N/A                                     ; 197.28 MHz ( period = 5.069 ns )                    ; lcd_timing_controller:u6|x_cnt[10] ; lcd_timing_controller:u6|blue_1[3]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.808 ns                ;
+; N/A                                     ; 197.28 MHz ( period = 5.069 ns )                    ; lcd_timing_controller:u6|x_cnt[10] ; lcd_timing_controller:u6|blue_1[4]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.808 ns                ;
+; N/A                                     ; 197.28 MHz ( period = 5.069 ns )                    ; lcd_timing_controller:u6|x_cnt[10] ; lcd_timing_controller:u6|blue_1[5]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.808 ns                ;
+; N/A                                     ; 197.28 MHz ( period = 5.069 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|mdata_in[7]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.801 ns                ;
+; N/A                                     ; 197.28 MHz ( period = 5.069 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|mdata_in[6]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.801 ns                ;
+; N/A                                     ; 197.28 MHz ( period = 5.069 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|mdata_in[5]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.801 ns                ;
+; N/A                                     ; 197.28 MHz ( period = 5.069 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|mdata_in[4]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.801 ns                ;
+; N/A                                     ; 197.28 MHz ( period = 5.069 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|mdata_in[3]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.801 ns                ;
+; N/A                                     ; 197.28 MHz ( period = 5.069 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|mdata_in[2]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.801 ns                ;
+; N/A                                     ; 197.28 MHz ( period = 5.069 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|mdata_in[1]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.801 ns                ;
+; N/A                                     ; 197.39 MHz ( period = 5.066 ns )                    ; Reset_Delay:u3|Cont[8]             ; Reset_Delay:u3|Cont[20]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.812 ns                ;
+; N/A                                     ; 197.39 MHz ( period = 5.066 ns )                    ; Reset_Delay:u3|Cont[8]             ; Reset_Delay:u3|Cont[21]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.812 ns                ;
+; N/A                                     ; 197.39 MHz ( period = 5.066 ns )                    ; Reset_Delay:u3|Cont[8]             ; Reset_Delay:u3|Cont[16]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.812 ns                ;
+; N/A                                     ; 197.39 MHz ( period = 5.066 ns )                    ; Reset_Delay:u3|Cont[8]             ; Reset_Delay:u3|Cont[19]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.812 ns                ;
+; N/A                                     ; 197.39 MHz ( period = 5.066 ns )                    ; Reset_Delay:u3|Cont[8]             ; Reset_Delay:u3|Cont[17]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.812 ns                ;
+; N/A                                     ; 197.39 MHz ( period = 5.066 ns )                    ; Reset_Delay:u3|Cont[8]             ; Reset_Delay:u3|Cont[18]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.812 ns                ;
+; N/A                                     ; 197.39 MHz ( period = 5.066 ns )                    ; Reset_Delay:u3|Cont[8]             ; Reset_Delay:u3|Cont[11]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.812 ns                ;
+; N/A                                     ; 197.39 MHz ( period = 5.066 ns )                    ; Reset_Delay:u3|Cont[8]             ; Reset_Delay:u3|Cont[12]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.812 ns                ;
+; N/A                                     ; 197.39 MHz ( period = 5.066 ns )                    ; Reset_Delay:u3|Cont[8]             ; Reset_Delay:u3|Cont[15]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.812 ns                ;
+; N/A                                     ; 197.39 MHz ( period = 5.066 ns )                    ; Reset_Delay:u3|Cont[8]             ; Reset_Delay:u3|Cont[14]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.812 ns                ;
+; N/A                                     ; 197.39 MHz ( period = 5.066 ns )                    ; Reset_Delay:u3|Cont[8]             ; Reset_Delay:u3|Cont[13]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.812 ns                ;
+; N/A                                     ; 197.67 MHz ( period = 5.059 ns )                    ; Reset_Delay:u3|Cont[1]             ; Reset_Delay:u3|Cont[20]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.805 ns                ;
+; N/A                                     ; 197.67 MHz ( period = 5.059 ns )                    ; Reset_Delay:u3|Cont[1]             ; Reset_Delay:u3|Cont[21]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.805 ns                ;
+; N/A                                     ; 197.67 MHz ( period = 5.059 ns )                    ; Reset_Delay:u3|Cont[1]             ; Reset_Delay:u3|Cont[16]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.805 ns                ;
+; N/A                                     ; 197.67 MHz ( period = 5.059 ns )                    ; Reset_Delay:u3|Cont[1]             ; Reset_Delay:u3|Cont[19]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.805 ns                ;
+; N/A                                     ; 197.67 MHz ( period = 5.059 ns )                    ; Reset_Delay:u3|Cont[1]             ; Reset_Delay:u3|Cont[17]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.805 ns                ;
+; N/A                                     ; 197.67 MHz ( period = 5.059 ns )                    ; Reset_Delay:u3|Cont[1]             ; Reset_Delay:u3|Cont[18]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.805 ns                ;
+; N/A                                     ; 197.67 MHz ( period = 5.059 ns )                    ; Reset_Delay:u3|Cont[1]             ; Reset_Delay:u3|Cont[11]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.805 ns                ;
+; N/A                                     ; 197.67 MHz ( period = 5.059 ns )                    ; Reset_Delay:u3|Cont[1]             ; Reset_Delay:u3|Cont[12]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.805 ns                ;
+; N/A                                     ; 197.67 MHz ( period = 5.059 ns )                    ; Reset_Delay:u3|Cont[1]             ; Reset_Delay:u3|Cont[15]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.805 ns                ;
+; N/A                                     ; 197.67 MHz ( period = 5.059 ns )                    ; Reset_Delay:u3|Cont[1]             ; Reset_Delay:u3|Cont[14]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.805 ns                ;
+; N/A                                     ; 197.67 MHz ( period = 5.059 ns )                    ; Reset_Delay:u3|Cont[1]             ; Reset_Delay:u3|Cont[13]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.805 ns                ;
+; N/A                                     ; 197.78 MHz ( period = 5.056 ns )                    ; Reset_Delay:u3|Cont[15]            ; Reset_Delay:u3|Cont[20]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.792 ns                ;
+; N/A                                     ; 197.78 MHz ( period = 5.056 ns )                    ; Reset_Delay:u3|Cont[15]            ; Reset_Delay:u3|Cont[21]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.792 ns                ;
+; N/A                                     ; 197.78 MHz ( period = 5.056 ns )                    ; Reset_Delay:u3|Cont[15]            ; Reset_Delay:u3|Cont[16]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.792 ns                ;
+; N/A                                     ; 197.78 MHz ( period = 5.056 ns )                    ; Reset_Delay:u3|Cont[15]            ; Reset_Delay:u3|Cont[19]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.792 ns                ;
+; N/A                                     ; 197.78 MHz ( period = 5.056 ns )                    ; Reset_Delay:u3|Cont[15]            ; Reset_Delay:u3|Cont[17]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.792 ns                ;
+; N/A                                     ; 197.78 MHz ( period = 5.056 ns )                    ; Reset_Delay:u3|Cont[15]            ; Reset_Delay:u3|Cont[18]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.792 ns                ;
+; N/A                                     ; 197.78 MHz ( period = 5.056 ns )                    ; Reset_Delay:u3|Cont[15]            ; Reset_Delay:u3|Cont[11]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.792 ns                ;
+; N/A                                     ; 197.78 MHz ( period = 5.056 ns )                    ; Reset_Delay:u3|Cont[15]            ; Reset_Delay:u3|Cont[12]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.792 ns                ;
+; N/A                                     ; 197.78 MHz ( period = 5.056 ns )                    ; Reset_Delay:u3|Cont[15]            ; Reset_Delay:u3|Cont[15]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.792 ns                ;
+; N/A                                     ; 197.78 MHz ( period = 5.056 ns )                    ; Reset_Delay:u3|Cont[15]            ; Reset_Delay:u3|Cont[14]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.792 ns                ;
+; N/A                                     ; 197.78 MHz ( period = 5.056 ns )                    ; Reset_Delay:u3|Cont[15]            ; Reset_Delay:u3|Cont[13]             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.792 ns                ;
+; N/A                                     ; 198.14 MHz ( period = 5.047 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|mdata_in[7]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.779 ns                ;
+; N/A                                     ; 198.14 MHz ( period = 5.047 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|mdata_in[6]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.779 ns                ;
+; N/A                                     ; 198.14 MHz ( period = 5.047 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|mdata_in[5]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.779 ns                ;
+; N/A                                     ; 198.14 MHz ( period = 5.047 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|mdata_in[4]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.779 ns                ;
+; N/A                                     ; 198.14 MHz ( period = 5.047 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|mdata_in[3]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.779 ns                ;
+; N/A                                     ; 198.14 MHz ( period = 5.047 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|mdata_in[2]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.779 ns                ;
+; N/A                                     ; 198.14 MHz ( period = 5.047 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|mdata_in[1]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.779 ns                ;
+; N/A                                     ; 198.22 MHz ( period = 5.045 ns )                    ; adc_spi_controller:u4|dclk_cnt[2]  ; adc_spi_controller:u4|mdata_in[3]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.777 ns                ;
+; N/A                                     ; 198.22 MHz ( period = 5.045 ns )                    ; adc_spi_controller:u4|dclk_cnt[2]  ; adc_spi_controller:u4|mdata_in[2]   ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.777 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                    ;                                     ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+------------------------------------+-------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; tsu                                                                                         ;
++-------+--------------+------------+----------+-----------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From     ; To                                ; To Clock ;
++-------+--------------+------------+----------+-----------------------------------+----------+
+; N/A   ; None         ; 6.085 ns   ; GPIO[39] ; adc_spi_controller:u4|transmit_en ; CLOCK_50 ;
+; N/A   ; None         ; 5.500 ns   ; GPIO[39] ; adc_spi_controller:u4|d1_PENIRQ_n ; CLOCK_50 ;
++-------+--------------+------------+----------+-----------------------------------+----------+
+
+
++------------------------------------------------------------------------------------------------+
+; tco                                                                                            ;
++-------+--------------+------------+------------------------------------+----------+------------+
+; Slack ; Required tco ; Actual tco ; From                               ; To       ; From Clock ;
++-------+--------------+------------+------------------------------------+----------+------------+
+; N/A   ; None         ; 12.551 ns  ; lcd_timing_controller:u6|oLCD_R[7] ; GPIO[9]  ; CLOCK_50   ;
+; N/A   ; None         ; 12.227 ns  ; lcd_timing_controller:u6|oLCD_B[3] ; GPIO[23] ; CLOCK_50   ;
+; N/A   ; None         ; 12.066 ns  ; lcd_timing_controller:u6|oLCD_B[0] ; GPIO[20] ; CLOCK_50   ;
+; N/A   ; None         ; 12.057 ns  ; lcd_timing_controller:u6|oLCD_R[6] ; GPIO[8]  ; CLOCK_50   ;
+; N/A   ; None         ; 11.989 ns  ; lcd_timing_controller:u6|oLCD_G[1] ; GPIO[13] ; CLOCK_50   ;
+; N/A   ; None         ; 11.824 ns  ; lcd_timing_controller:u6|oLCD_G[2] ; GPIO[14] ; CLOCK_50   ;
+; N/A   ; None         ; 11.822 ns  ; lcd_timing_controller:u6|oHD       ; GPIO[31] ; CLOCK_50   ;
+; N/A   ; None         ; 11.730 ns  ; lcd_timing_controller:u6|oLCD_G[5] ; GPIO[17] ; CLOCK_50   ;
+; N/A   ; None         ; 11.641 ns  ; lcd_timing_controller:u6|oVD       ; GPIO[32] ; CLOCK_50   ;
+; N/A   ; None         ; 11.620 ns  ; lcd_timing_controller:u6|oLCD_G[7] ; GPIO[19] ; CLOCK_50   ;
+; N/A   ; None         ; 11.585 ns  ; lcd_timing_controller:u6|oLCD_G[6] ; GPIO[18] ; CLOCK_50   ;
+; N/A   ; None         ; 11.440 ns  ; lcd_timing_controller:u6|oLCD_R[4] ; GPIO[6]  ; CLOCK_50   ;
+; N/A   ; None         ; 11.420 ns  ; lcd_timing_controller:u6|oLCD_R[2] ; GPIO[4]  ; CLOCK_50   ;
+; N/A   ; None         ; 11.389 ns  ; lcd_timing_controller:u6|oLCD_R[1] ; GPIO[3]  ; CLOCK_50   ;
+; N/A   ; None         ; 11.303 ns  ; lcd_timing_controller:u6|oLCD_G[0] ; GPIO[12] ; CLOCK_50   ;
+; N/A   ; None         ; 11.179 ns  ; lcd_timing_controller:u6|oLCD_B[1] ; GPIO[21] ; CLOCK_50   ;
+; N/A   ; None         ; 11.085 ns  ; lcd_timing_controller:u6|oLCD_R[5] ; GPIO[7]  ; CLOCK_50   ;
+; N/A   ; None         ; 11.010 ns  ; lcd_timing_controller:u6|oLCD_G[4] ; GPIO[16] ; CLOCK_50   ;
+; N/A   ; None         ; 10.979 ns  ; lcd_timing_controller:u6|oLCD_G[3] ; GPIO[15] ; CLOCK_50   ;
+; N/A   ; None         ; 10.808 ns  ; lcd_timing_controller:u6|oLCD_B[4] ; GPIO[24] ; CLOCK_50   ;
+; N/A   ; None         ; 10.617 ns  ; adc_spi_controller:u4|mcs          ; GPIO[35] ; CLOCK_50   ;
+; N/A   ; None         ; 10.582 ns  ; lcd_timing_controller:u6|oLCD_R[3] ; GPIO[5]  ; CLOCK_50   ;
+; N/A   ; None         ; 10.516 ns  ; lcd_timing_controller:u6|oLCD_R[0] ; GPIO[1]  ; CLOCK_50   ;
+; N/A   ; None         ; 10.440 ns  ; lcd_timing_controller:u6|oLCD_B[7] ; GPIO[27] ; CLOCK_50   ;
+; N/A   ; None         ; 10.427 ns  ; lcd_timing_controller:u6|oLCD_B[6] ; GPIO[26] ; CLOCK_50   ;
+; N/A   ; None         ; 10.230 ns  ; lcd_timing_controller:u6|oLCD_B[2] ; GPIO[22] ; CLOCK_50   ;
+; N/A   ; None         ; 10.218 ns  ; lcd_timing_controller:u6|oLCD_B[5] ; GPIO[25] ; CLOCK_50   ;
+; N/A   ; None         ; 9.724 ns   ; adc_spi_controller:u4|mdclk        ; GPIO[34] ; CLOCK_50   ;
+; N/A   ; None         ; 9.467 ns   ; div[0]                             ; GPIO[30] ; CLOCK_50   ;
+; N/A   ; None         ; 9.338 ns   ; adc_spi_controller:u4|mdata_in[7]  ; GPIO[36] ; CLOCK_50   ;
++-------+--------------+------------+------------------------------------+----------+------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; th                                                                                                ;
++---------------+-------------+-----------+----------+-----------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From     ; To                                ; To Clock ;
++---------------+-------------+-----------+----------+-----------------------------------+----------+
+; N/A           ; None        ; -5.234 ns ; GPIO[39] ; adc_spi_controller:u4|d1_PENIRQ_n ; CLOCK_50 ;
+; N/A           ; None        ; -5.819 ns ; GPIO[39] ; adc_spi_controller:u4|transmit_en ; CLOCK_50 ;
++---------------+-------------+-----------+----------+-----------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
+    Info: Processing started: Thu Mar 10 15:00:27 2011
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off dp1_pattern -c dp1_pattern --timing_analysis_only
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLOCK_50" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "div[0]" as buffer
+Info: Clock "CLOCK_50" has Internal fmax of 183.99 MHz between source register "lcd_timing_controller:u6|x_cnt[2]" and destination register "lcd_timing_controller:u6|red_1[5]" (period= 5.435 ns)
+    Info: + Longest register to register delay is 5.160 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X22_Y14_N11; Fanout = 4; REG Node = 'lcd_timing_controller:u6|x_cnt[2]'
+        Info: 2: + IC(0.470 ns) + CELL(0.651 ns) = 1.121 ns; Loc. = LCCOMB_X22_Y14_N30; Fanout = 2; COMB Node = 'lcd_timing_controller:u6|red_1[0]~34'
+        Info: 3: + IC(0.375 ns) + CELL(0.494 ns) = 1.990 ns; Loc. = LCCOMB_X22_Y14_N16; Fanout = 1; COMB Node = 'lcd_timing_controller:u6|red_1[0]~35'
+        Info: 4: + IC(0.381 ns) + CELL(0.370 ns) = 2.741 ns; Loc. = LCCOMB_X22_Y14_N28; Fanout = 9; COMB Node = 'lcd_timing_controller:u6|red_1[0]~37'
+        Info: 5: + IC(0.369 ns) + CELL(0.202 ns) = 3.312 ns; Loc. = LCCOMB_X22_Y14_N6; Fanout = 24; COMB Node = 'lcd_timing_controller:u6|red_1[0]~38'
+        Info: 6: + IC(0.993 ns) + CELL(0.855 ns) = 5.160 ns; Loc. = LCFF_X19_Y14_N9; Fanout = 1; REG Node = 'lcd_timing_controller:u6|red_1[5]'
+        Info: Total cell delay = 2.572 ns ( 49.84 % )
+        Info: Total interconnect delay = 2.588 ns ( 50.16 % )
+    Info: - Smallest clock skew is -0.011 ns
+        Info: + Shortest clock path from clock "CLOCK_50" to destination register is 5.010 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.140 ns) = 1.140 ns; Loc. = PIN_23; Fanout = 2; CLK Node = 'CLOCK_50'
+            Info: 2: + IC(0.522 ns) + CELL(0.970 ns) = 2.632 ns; Loc. = LCFF_X1_Y9_N9; Fanout = 3; REG Node = 'div[0]'
+            Info: 3: + IC(0.815 ns) + CELL(0.000 ns) = 3.447 ns; Loc. = CLKCTRL_G0; Fanout = 81; COMB Node = 'div[0]~clkctrl'
+            Info: 4: + IC(0.897 ns) + CELL(0.666 ns) = 5.010 ns; Loc. = LCFF_X19_Y14_N9; Fanout = 1; REG Node = 'lcd_timing_controller:u6|red_1[5]'
+            Info: Total cell delay = 2.776 ns ( 55.41 % )
+            Info: Total interconnect delay = 2.234 ns ( 44.59 % )
+        Info: - Longest clock path from clock "CLOCK_50" to source register is 5.021 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.140 ns) = 1.140 ns; Loc. = PIN_23; Fanout = 2; CLK Node = 'CLOCK_50'
+            Info: 2: + IC(0.522 ns) + CELL(0.970 ns) = 2.632 ns; Loc. = LCFF_X1_Y9_N9; Fanout = 3; REG Node = 'div[0]'
+            Info: 3: + IC(0.815 ns) + CELL(0.000 ns) = 3.447 ns; Loc. = CLKCTRL_G0; Fanout = 81; COMB Node = 'div[0]~clkctrl'
+            Info: 4: + IC(0.908 ns) + CELL(0.666 ns) = 5.021 ns; Loc. = LCFF_X22_Y14_N11; Fanout = 4; REG Node = 'lcd_timing_controller:u6|x_cnt[2]'
+            Info: Total cell delay = 2.776 ns ( 55.29 % )
+            Info: Total interconnect delay = 2.245 ns ( 44.71 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Micro setup delay of destination is -0.040 ns
+Info: tsu for register "adc_spi_controller:u4|transmit_en" (data pin = "GPIO[39]", clock pin = "CLOCK_50") is 6.085 ns
+    Info: + Longest pin to register delay is 8.967 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = PIN_69; Fanout = 1; PIN Node = 'GPIO[39]'
+        Info: 2: + IC(0.000 ns) + CELL(0.994 ns) = 0.994 ns; Loc. = IOC_X12_Y0_N0; Fanout = 2; COMB Node = 'GPIO[39]~71'
+        Info: 3: + IC(6.932 ns) + CELL(0.370 ns) = 8.296 ns; Loc. = LCCOMB_X29_Y11_N2; Fanout = 1; COMB Node = 'adc_spi_controller:u4|always2~0'
+        Info: 4: + IC(0.361 ns) + CELL(0.202 ns) = 8.859 ns; Loc. = LCCOMB_X29_Y11_N30; Fanout = 1; COMB Node = 'adc_spi_controller:u4|transmit_en~2'
+        Info: 5: + IC(0.000 ns) + CELL(0.108 ns) = 8.967 ns; Loc. = LCFF_X29_Y11_N31; Fanout = 5; REG Node = 'adc_spi_controller:u4|transmit_en'
+        Info: Total cell delay = 1.674 ns ( 18.67 % )
+        Info: Total interconnect delay = 7.293 ns ( 81.33 % )
+    Info: + Micro setup delay of destination is -0.040 ns
+    Info: - Shortest clock path from clock "CLOCK_50" to destination register is 2.842 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.140 ns) = 1.140 ns; Loc. = PIN_23; Fanout = 2; CLK Node = 'CLOCK_50'
+        Info: 2: + IC(0.139 ns) + CELL(0.000 ns) = 1.279 ns; Loc. = CLKCTRL_G2; Fanout = 60; COMB Node = 'CLOCK_50~clkctrl'
+        Info: 3: + IC(0.897 ns) + CELL(0.666 ns) = 2.842 ns; Loc. = LCFF_X29_Y11_N31; Fanout = 5; REG Node = 'adc_spi_controller:u4|transmit_en'
+        Info: Total cell delay = 1.806 ns ( 63.55 % )
+        Info: Total interconnect delay = 1.036 ns ( 36.45 % )
+Info: tco from clock "CLOCK_50" to destination pin "GPIO[9]" through register "lcd_timing_controller:u6|oLCD_R[7]" is 12.551 ns
+    Info: + Longest clock path from clock "CLOCK_50" to source register is 5.017 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.140 ns) = 1.140 ns; Loc. = PIN_23; Fanout = 2; CLK Node = 'CLOCK_50'
+        Info: 2: + IC(0.522 ns) + CELL(0.970 ns) = 2.632 ns; Loc. = LCFF_X1_Y9_N9; Fanout = 3; REG Node = 'div[0]'
+        Info: 3: + IC(0.815 ns) + CELL(0.000 ns) = 3.447 ns; Loc. = CLKCTRL_G0; Fanout = 81; COMB Node = 'div[0]~clkctrl'
+        Info: 4: + IC(0.904 ns) + CELL(0.666 ns) = 5.017 ns; Loc. = LCFF_X23_Y13_N25; Fanout = 1; REG Node = 'lcd_timing_controller:u6|oLCD_R[7]'
+        Info: Total cell delay = 2.776 ns ( 55.33 % )
+        Info: Total interconnect delay = 2.241 ns ( 44.67 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Longest register to pin delay is 7.230 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X23_Y13_N25; Fanout = 1; REG Node = 'lcd_timing_controller:u6|oLCD_R[7]'
+        Info: 2: + IC(4.124 ns) + CELL(3.106 ns) = 7.230 ns; Loc. = PIN_45; Fanout = 0; PIN Node = 'GPIO[9]'
+        Info: Total cell delay = 3.106 ns ( 42.96 % )
+        Info: Total interconnect delay = 4.124 ns ( 57.04 % )
+Info: th for register "adc_spi_controller:u4|d1_PENIRQ_n" (data pin = "GPIO[39]", clock pin = "CLOCK_50") is -5.234 ns
+    Info: + Longest clock path from clock "CLOCK_50" to destination register is 2.821 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.140 ns) = 1.140 ns; Loc. = PIN_23; Fanout = 2; CLK Node = 'CLOCK_50'
+        Info: 2: + IC(0.139 ns) + CELL(0.000 ns) = 1.279 ns; Loc. = CLKCTRL_G2; Fanout = 60; COMB Node = 'CLOCK_50~clkctrl'
+        Info: 3: + IC(0.876 ns) + CELL(0.666 ns) = 2.821 ns; Loc. = LCFF_X29_Y10_N27; Fanout = 2; REG Node = 'adc_spi_controller:u4|d1_PENIRQ_n'
+        Info: Total cell delay = 1.806 ns ( 64.02 % )
+        Info: Total interconnect delay = 1.015 ns ( 35.98 % )
+    Info: + Micro hold delay of destination is 0.306 ns
+    Info: - Shortest pin to register delay is 8.361 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = PIN_69; Fanout = 1; PIN Node = 'GPIO[39]'
+        Info: 2: + IC(0.000 ns) + CELL(0.994 ns) = 0.994 ns; Loc. = IOC_X12_Y0_N0; Fanout = 2; COMB Node = 'GPIO[39]~71'
+        Info: 3: + IC(6.907 ns) + CELL(0.460 ns) = 8.361 ns; Loc. = LCFF_X29_Y10_N27; Fanout = 2; REG Node = 'adc_spi_controller:u4|d1_PENIRQ_n'
+        Info: Total cell delay = 1.454 ns ( 17.39 % )
+        Info: Total interconnect delay = 6.907 ns ( 82.61 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 141 megabytes
+    Info: Processing ended: Thu Mar 10 15:00:28 2011
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

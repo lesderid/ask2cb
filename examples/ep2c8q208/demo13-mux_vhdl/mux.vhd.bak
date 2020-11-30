@@ -1,0 +1,65 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY mux IS
+   PORT (
+      a                       : IN std_logic;   
+      b                       : IN std_logic_vector(1 DOWNTO 0);   
+      c                       : IN std_logic_vector(1 DOWNTO 0);   
+      d                       : OUT std_logic_vector(7 DOWNTO 0);   
+      en                      : OUT std_logic_vector(7 DOWNTO 0));   
+END mux;
+
+ARCHITECTURE arch OF mux IS
+
+   SIGNAL d_tmp                    :  std_logic_vector(2 DOWNTO 0);   
+   SIGNAL temp_xhd               :  std_logic_vector(1 DOWNTO 0);   
+BEGIN
+   en <= "00000000" ;
+   temp_xhd <= b WHEN a = '1' ELSE c;
+   d_tmp <= "0" & temp_xhd ;
+
+   PROCESS(d_tmp)
+   BEGIN
+      CASE d_tmp IS
+         WHEN "0000" =>
+                  d <= "00000011";    
+         WHEN "0001" =>
+                  d <= "10011111";    
+         WHEN "0010" =>
+                  d <= "00100101";    
+         WHEN "0011" =>
+                  d <= "00001101";    
+         WHEN "0100" =>
+                  d <= "10011001";    
+         WHEN "0101" =>
+                  d <= "01001001";    
+         WHEN "0110" =>
+                  d <= "01000001";    
+         WHEN "0111" =>
+                  d <= "00011111";    
+         WHEN "1000" =>
+                  d <= "00000001";    
+         WHEN "1001" =>
+                  d <= "00011001";    
+         WHEN "1010" =>
+                  d <= "00010001";    
+         WHEN "1011" =>
+                  d <= "11000001";    
+         WHEN "1100" =>
+                  d <= "01100011";    
+         WHEN "1101" =>
+                  d <= "10000101";    
+         WHEN "1110" =>
+                  d <= "01100001";    
+         WHEN "1111" =>
+                  d <= "01110001";    
+         WHEN OTHERS =>
+                  NULL;
+         
+      END CASE;
+   END PROCESS;
+
+END arch;

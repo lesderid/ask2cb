@@ -1,0 +1,25 @@
+|mux
+a => temp_xhd[0].OUTPUTSELECT
+a => temp_xhd[1].OUTPUTSELECT
+b[0] => temp_xhd[0].DATAB
+b[1] => temp_xhd[1].DATAB
+c[0] => temp_xhd[0].DATAA
+c[1] => temp_xhd[1].DATAA
+d[0] <= <VCC>
+d[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+d[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+d[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+d[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+d[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+d[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+d[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+en[0] <= <GND>
+en[1] <= <GND>
+en[2] <= <GND>
+en[3] <= <GND>
+en[4] <= <GND>
+en[5] <= <GND>
+en[6] <= <GND>
+en[7] <= <GND>
+
+

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Aug 17 02:02:53 2010
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Full Version
+Revision Name : beep1
+Top-level Entity Name : beep1
+Family : Cyclone II
+Total logic elements : 225
+    Total combinational functions : 224
+    Dedicated logic registers : 53
+Total registers : 53
+Total pins : 2
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

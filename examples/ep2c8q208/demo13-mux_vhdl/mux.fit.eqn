@@ -1,0 +1,288 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L82 is Mux~519 at LC97
+A1L82_p1_out = b[1] & !b[2] & a & !b[0];
+A1L82_p2_out = !a & c[1] & !c[2] & !c[0];
+A1L82_or_out = A1L82_p1_out # A1L82_p2_out;
+A1L82 = A1L82_or_out;
+
+
+--A1L92 is Mux~524 at LC91
+A1L92_p1_out = b[0] & a;
+A1L92_p2_out = !a & c[0];
+A1L92_p3_out = !a & !c[1] & c[2];
+A1L92_p4_out = a & b[2] & !b[1];
+A1L92_or_out = A1L92_p1_out # A1L92_p2_out # A1L92_p3_out # A1L92_p4_out;
+A1L92 = A1L92_or_out;
+
+
+--A1L03 is Mux~529 at LC85
+A1L03_p1_out = c[2] & c[1] & !a & !c[0];
+A1L03_p2_out = c[2] & !c[1] & !a & c[0];
+A1L03_p3_out = a & b[2] & !b[1] & b[0];
+A1L03_p4_out = a & b[2] & b[1] & !b[0];
+A1L03_or_out = A1L03_p1_out # A1L03_p2_out # A1L03_p3_out # A1L03_p4_out;
+A1L03 = A1L03_or_out;
+
+
+--A1L13 is Mux~534 at LC88
+A1L13_p1_out = c[2] & !c[0] & !c[1] & !a;
+A1L13_p2_out = !c[2] & c[0] & !c[1] & !a;
+A1L13_p3_out = a & !b[1] & !b[0] & b[2];
+A1L13_p4_out = a & !b[1] & b[0] & !b[2];
+A1L13_or_out = A1L13_p1_out # A1L13_p2_out # A1L13_p3_out # A1L13_p4_out;
+A1L13 = A1L13_or_out;
+
+
+--A1L23 is Mux~539 at LC99
+A1L23_p1_out = !a & !c[2] & !c[1];
+A1L23_p2_out = a & !b[2] & !b[1];
+A1L23_p3_out = a & b[2] & b[1] & b[0];
+A1L23_p4_out = !a & c[2] & c[1] & c[0];
+A1L23_or_out = A1L23_p1_out # A1L23_p2_out # A1L23_p3_out # A1L23_p4_out;
+A1L23 = A1L23_or_out;
+
+
+--A1L33 is Mux~545 at LC93
+A1L33_p0_out = b[0] & !b[1] & !b[2] & a;
+A1L33_p1_out = b[0] & b[1] & b[2] & a;
+A1L33_p2_out = !a & !c[1] & c[2] & !c[0];
+A1L33_p3_out = !a & c[1] & c[2] & c[0];
+A1L33_p4_out = !a & !c[1] & !c[2] & c[0];
+A1L33_or_out = A1L14 # A1L33_p0_out # A1L33_p1_out # A1L33_p2_out # A1L33_p3_out # A1L33_p4_out;
+A1L33 = A1L33_or_out;
+
+
+--A1L43 is Mux~546 at SEXP94
+A1L43 = EXP(!b[1] & !b[0] & a);
+
+
+--A1L53 is Mux~547 at SEXP92
+A1L53 = EXP(!b[1] & b[2] & a);
+
+
+--A1L63 is Mux~548 at SEXP91
+A1L63 = EXP(!b[0] & b[2] & a);
+
+
+--A1L73 is Mux~549 at SEXP88
+A1L73 = EXP(!c[1] & c[2] & !a);
+
+
+--A1L83 is Mux~550 at SEXP86
+A1L83 = EXP(!c[1] & !c[0] & !a);
+
+
+--A1L93 is Mux~551 at SEXP85
+A1L93 = EXP(c[2] & !c[0] & !a);
+
+
+--A1L04 is Mux~552 at LC86
+A1L04_p1_out = A1L43 & A1L53 & A1L63 & A1L73 & A1L83 & A1L93;
+A1L04_or_out = A1L04_p1_out;
+A1L04 = A1L04_or_out;
+
+
+--A1L14 is Mux~554 at LC92
+A1L14_p1_out = !b[0] & !b[1] & b[2] & a;
+A1L14 = A1L14_p1_out;
+
+
+--~VCC~0 is ~VCC~0 at LC94
+~VCC~0_or_out = GND;
+~VCC~0 = !(~VCC~0_or_out);
+
+
+--~GND~0 is ~GND~0 at LC118
+~GND~0_or_out = GND;
+~GND~0 = ~GND~0_or_out;
+
+
+--~GND~1 is ~GND~1 at LC117
+~GND~1_or_out = GND;
+~GND~1 = ~GND~1_or_out;
+
+
+--~GND~2 is ~GND~2 at LC115
+~GND~2_or_out = GND;
+~GND~2 = ~GND~2_or_out;
+
+
+--~GND~3 is ~GND~3 at LC109
+~GND~3_or_out = GND;
+~GND~3 = ~GND~3_or_out;
+
+
+--~GND~4 is ~GND~4 at LC107
+~GND~4_or_out = GND;
+~GND~4 = ~GND~4_or_out;
+
+
+--~GND~5 is ~GND~5 at LC105
+~GND~5_or_out = GND;
+~GND~5 = ~GND~5_or_out;
+
+
+--~GND~6 is ~GND~6 at LC104
+~GND~6_or_out = GND;
+~GND~6 = ~GND~6_or_out;
+
+
+--~GND~7 is ~GND~7 at LC101
+~GND~7_or_out = GND;
+~GND~7 = ~GND~7_or_out;
+
+
+--a is a at PIN_15
+--operation mode is input
+
+a = INPUT();
+
+
+--b[0] is b[0] at PIN_24
+--operation mode is input
+
+b[0] = INPUT();
+
+
+--b[1] is b[1] at PIN_22
+--operation mode is input
+
+b[1] = INPUT();
+
+
+--b[2] is b[2] at PIN_21
+--operation mode is input
+
+b[2] = INPUT();
+
+
+--c[0] is c[0] at PIN_20
+--operation mode is input
+
+c[0] = INPUT();
+
+
+--c[1] is c[1] at PIN_18
+--operation mode is input
+
+c[1] = INPUT();
+
+
+--c[2] is c[2] at PIN_17
+--operation mode is input
+
+c[2] = INPUT();
+
+
+--d[0] is d[0] at PIN_61
+--operation mode is output
+
+d[0] = OUTPUT(~VCC~0);
+
+
+--en[0] is en[0] at PIN_75
+--operation mode is output
+
+en[0] = OUTPUT(~GND~0);
+
+
+--en[1] is en[1] at PIN_74
+--operation mode is output
+
+en[1] = OUTPUT(~GND~1);
+
+
+--en[2] is en[2] at PIN_73
+--operation mode is output
+
+en[2] = OUTPUT(~GND~2);
+
+
+--en[3] is en[3] at PIN_70
+--operation mode is output
+
+en[3] = OUTPUT(~GND~3);
+
+
+--en[4] is en[4] at PIN_69
+--operation mode is output
+
+en[4] = OUTPUT(~GND~4);
+
+
+--en[5] is en[5] at PIN_68
+--operation mode is output
+
+en[5] = OUTPUT(~GND~5);
+
+
+--en[6] is en[6] at PIN_67
+--operation mode is output
+
+en[6] = OUTPUT(~GND~6);
+
+
+--en[7] is en[7] at PIN_65
+--operation mode is output
+
+en[7] = OUTPUT(~GND~7);
+
+
+--d[5] is d[5] at PIN_63
+--operation mode is output
+
+d[5] = OUTPUT(A1L82);
+
+
+--d[3] is d[3] at PIN_58
+--operation mode is output
+
+d[3] = OUTPUT(A1L92);
+
+
+--d[6] is d[6] at PIN_55
+--operation mode is output
+
+d[6] = OUTPUT(A1L03);
+
+
+--d[7] is d[7] at PIN_57
+--operation mode is output
+
+d[7] = OUTPUT(A1L13);
+
+
+--d[1] is d[1] at PIN_64
+--operation mode is output
+
+d[1] = OUTPUT(A1L23);
+
+
+--d[2] is d[2] at PIN_56
+--operation mode is output
+
+d[2] = OUTPUT(A1L04);
+
+
+--d[4] is d[4] at PIN_60
+--operation mode is output
+
+d[4] = OUTPUT(A1L33);
+
+
+
+
+
+

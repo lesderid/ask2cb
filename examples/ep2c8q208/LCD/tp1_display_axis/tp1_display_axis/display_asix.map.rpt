@@ -1,0 +1,439 @@
+Analysis & Synthesis report for display_asix
+Thu Mar 10 15:12:40 2011
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: SEG7_Driver:u1
+ 12. Parameter Settings for User Entity Instance: adc_spi_controller:u4
+ 13. Parameter Settings for User Entity Instance: touch_irq_detector:u5
+ 14. Port Connectivity Checks: "touch_irq_detector:u5"
+ 15. Port Connectivity Checks: "Reset_Delay:u3"
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                       ;
++------------------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Mar 10 15:12:40 2011         ;
+; Quartus II Version                 ; 9.0 Build 235 06/17/2009 SP 2 SJ Full Version ;
+; Revision Name                      ; display_asix                                  ;
+; Top-level Entity Name              ; display_asix                                  ;
+; Family                             ; Cyclone II                                    ;
+; Total logic elements               ; 245                                           ;
+;     Total combinational functions  ; 177                                           ;
+;     Dedicated logic registers      ; 180                                           ;
+; Total registers                    ; 180                                           ;
+; Total pins                         ; 61                                            ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 0                                             ;
+; Embedded Multiplier 9-bit elements ; 0                                             ;
+; Total PLLs                         ; 0                                             ;
++------------------------------------+-----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Device                                                       ; EP2C8Q208C8        ;                    ;
+; Top-level entity name                                        ; display_asix       ; display_asix       ;
+; Family name                                                  ; Cyclone II         ; Stratix II         ;
+; Use Generated Physical Constraints File                      ; Off                ;                    ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; DSP Block Balancing                                          ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Optimization Technique                                       ; Balanced           ; Balanced           ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Auto ROM Replacement                                         ; On                 ; On                 ;
+; Auto RAM Replacement                                         ; On                 ; On                 ;
+; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Strict RAM Replacement                                       ; Off                ; Off                ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                            ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing          ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Timing-Driven Synthesis                                      ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                  ; Off                ; Off                ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; SDC constraint protection                                    ; Off                ; Off                ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                           ; Medium             ; Medium             ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                  ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                              ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+
+; display_asix.v                   ; yes             ; User Verilog HDL File  ; E:/touchpanel/tp1_display_axis/tp1_display_axis-3-ok/display_asix.v       ;
+; adc_spi_controller.v             ; yes             ; User Verilog HDL File  ; E:/touchpanel/tp1_display_axis/tp1_display_axis-3-ok/adc_spi_controller.v ;
+; Reset_Delay.v                    ; yes             ; User Verilog HDL File  ; E:/touchpanel/tp1_display_axis/tp1_display_axis-3-ok/Reset_Delay.v        ;
+; SEG7_Driver.v                    ; yes             ; User Verilog HDL File  ; E:/touchpanel/tp1_display_axis/tp1_display_axis-3-ok/SEG7_Driver.v        ;
+; touch_irq_detector.v             ; yes             ; User Verilog HDL File  ; E:/touchpanel/tp1_display_axis/tp1_display_axis-3-ok/touch_irq_detector.v ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 245      ;
+;                                             ;          ;
+; Total combinational functions               ; 177      ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 65       ;
+;     -- 3 input functions                    ; 21       ;
+;     -- <=2 input functions                  ; 91       ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 105      ;
+;     -- arithmetic mode                      ; 72       ;
+;                                             ;          ;
+; Total registers                             ; 180      ;
+;     -- Dedicated logic registers            ; 180      ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 61       ;
+; Maximum fan-out node                        ; CLOCK_50 ;
+; Maximum fan-out                             ; 169      ;
+; Total fan-out                               ; 1204     ;
+; Average fan-out                             ; 2.88     ;
++---------------------------------------------+----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
+; |display_asix              ; 177 (0)           ; 180 (0)      ; 0           ; 0            ; 0       ; 0         ; 61   ; 0            ; |display_asix                       ; work         ;
+;    |Reset_Delay:u3|        ; 31 (31)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_asix|Reset_Delay:u3        ; work         ;
+;    |SEG7_Driver:u1|        ; 82 (82)           ; 56 (56)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_asix|SEG7_Driver:u1        ; work         ;
+;    |adc_spi_controller:u4| ; 64 (64)           ; 101 (101)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_asix|adc_spi_controller:u4 ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; adc_spi_controller:u4|mdata_in[0]     ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 180   ;
+; Number of registers using Synchronous Clear  ; 48    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 180   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 99    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; adc_spi_controller:u4|mcs              ; 3       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |display_asix|adc_spi_controller:u4|mdata_in[4]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |display_asix|adc_spi_controller:u4|dclk_cnt[14] ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |display_asix|SEG7_Driver:u1|mDEC_in[0]          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SEG7_Driver:u1 ;
++----------------+----------+---------------------------------+
+; Parameter Name ; Value    ; Type                            ;
++----------------+----------+---------------------------------+
+; iCLK_Freq      ; 50000000 ; Signed Integer                  ;
++----------------+----------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adc_spi_controller:u4 ;
++----------------+----------+----------------------------------------+
+; Parameter Name ; Value    ; Type                                   ;
++----------------+----------+----------------------------------------+
+; SYSCLK_FRQ     ; 50000000 ; Signed Integer                         ;
+; ADC_DCLK_FRQ   ; 1000     ; Signed Integer                         ;
+; ADC_DCLK_CNT   ; 25000    ; Signed Integer                         ;
++----------------+----------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: touch_irq_detector:u5 ;
++-----------------+--------------------------+-----------------------+
+; Parameter Name  ; Value                    ; Type                  ;
++-----------------+--------------------------+-----------------------+
+; TOUCH_CNT_CLEAR ; 111111111111111111111111 ; Unsigned Binary       ;
++-----------------+--------------------------+-----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "touch_irq_detector:u5"                                                                                                                                                                ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; iX_COORD ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (12 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; iY_COORD ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (12 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Reset_Delay:u3"                                                                       ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; oRST_1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; oRST_2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
+    Info: Processing started: Thu Mar 10 15:12:36 2011
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off display_asix -c display_asix
+Warning (10275): Verilog HDL Module Instantiation warning at display_asix.v(193): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at display_asix.v(203): ignored dangling comma in List of Port Connections
+Warning (10238): Verilog Module Declaration warning at display_asix.v(30): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "display_asix"
+Info: Found 1 design units, including 1 entities, in source file display_asix.v
+    Info: Found entity 1: display_asix
+Warning (10238): Verilog Module Declaration warning at adc_spi_controller.v(56): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "adc_spi_controller"
+Info: Found 1 design units, including 1 entities, in source file adc_spi_controller.v
+    Info: Found entity 1: adc_spi_controller
+Info: Found 1 design units, including 1 entities, in source file lcd_spi_cotroller.v
+    Info: Found entity 1: lcd_spi_cotroller
+Info: Found 1 design units, including 1 entities, in source file lcd_timing_controller.v
+    Info: Found entity 1: lcd_timing_controller
+Info: Found 1 design units, including 1 entities, in source file Reset_Delay.v
+    Info: Found entity 1: Reset_Delay
+Info: Found 1 design units, including 1 entities, in source file SEG7_Driver.v
+    Info: Found entity 1: SEG7_Driver
+Info: Found 1 design units, including 1 entities, in source file SEG7_LUT.v
+    Info: Found entity 1: SEG7_LUT
+Info: Found 1 design units, including 1 entities, in source file SEG7_LUT_8.v
+    Info: Found entity 1: SEG7_LUT_8
+Info: Found 1 design units, including 1 entities, in source file three_wire_controller.v
+    Info: Found entity 1: three_wire_controller
+Warning (10238): Verilog Module Declaration warning at touch_irq_detector.v(9): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "touch_irq_detector"
+Info: Found 1 design units, including 1 entities, in source file touch_irq_detector.v
+    Info: Found entity 1: touch_irq_detector
+Warning (10236): Verilog HDL Implicit Net warning at display_asix.v(175): created implicit net for "DLY0"
+Warning (10236): Verilog HDL Implicit Net warning at display_asix.v(176): created implicit net for "DLY1"
+Warning (10236): Verilog HDL Implicit Net warning at display_asix.v(177): created implicit net for "DLY2"
+Warning (10236): Verilog HDL Implicit Net warning at display_asix.v(189): created implicit net for "touch_irq"
+Info: Elaborating entity "display_asix" for the top level hierarchy
+Info: Elaborating entity "SEG7_Driver" for hierarchy "SEG7_Driver:u1"
+Info: Elaborating entity "Reset_Delay" for hierarchy "Reset_Delay:u3"
+Warning (10230): Verilog HDL assignment warning at Reset_Delay.v(22): truncated value with size 32 to match size of target (22)
+Info: Elaborating entity "adc_spi_controller" for hierarchy "adc_spi_controller:u4"
+Warning (10230): Verilog HDL assignment warning at adc_spi_controller.v(189): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at adc_spi_controller.v(195): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at adc_spi_controller.v(211): truncated value with size 32 to match size of target (7)
+Warning (10230): Verilog HDL assignment warning at adc_spi_controller.v(273): truncated value with size 32 to match size of target (1)
+Info: Elaborating entity "touch_irq_detector" for hierarchy "touch_irq_detector:u5"
+Warning (10230): Verilog HDL assignment warning at touch_irq_detector.v(61): truncated value with size 32 to match size of target (25)
+Warning: 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning: The following nodes have both tri-state and non-tri-state drivers
+    Warning: Inserted always-enabled tri-state buffer between "COM[0]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "COM[1]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "COM[2]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "COM[3]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "COM[4]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "COM[5]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "COM[6]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "COM[7]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SEG7[0]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SEG7[1]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SEG7[2]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SEG7[3]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SEG7[4]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SEG7[5]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SEG7[6]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "SEG7[7]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "GPIO[1]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "GPIO[3]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "GPIO[5]" and its non-tri-state driver.
+Warning: The following bidir pins have no drivers
+    Warning: Bidir "GPIO[0]" has no driver
+    Warning: Bidir "GPIO[2]" has no driver
+    Warning: Bidir "GPIO[8]" has no driver
+    Warning: Bidir "GPIO[9]" has no driver
+    Warning: Bidir "GPIO[10]" has no driver
+    Warning: Bidir "GPIO[11]" has no driver
+    Warning: Bidir "GPIO[12]" has no driver
+    Warning: Bidir "GPIO[13]" has no driver
+    Warning: Bidir "GPIO[14]" has no driver
+    Warning: Bidir "GPIO[15]" has no driver
+    Warning: Bidir "GPIO[16]" has no driver
+    Warning: Bidir "GPIO[17]" has no driver
+    Warning: Bidir "GPIO[18]" has no driver
+    Warning: Bidir "GPIO[19]" has no driver
+    Warning: Bidir "GPIO[20]" has no driver
+    Warning: Bidir "GPIO[21]" has no driver
+    Warning: Bidir "GPIO[22]" has no driver
+    Warning: Bidir "GPIO[23]" has no driver
+    Warning: Bidir "GPIO[24]" has no driver
+    Warning: Bidir "GPIO[25]" has no driver
+    Warning: Bidir "GPIO[26]" has no driver
+    Warning: Bidir "GPIO[27]" has no driver
+    Warning: Bidir "GPIO[28]" has no driver
+    Warning: Bidir "GPIO[29]" has no driver
+    Warning: Bidir "GPIO[30]" has no driver
+    Warning: Bidir "GPIO[31]" has no driver
+    Warning: Bidir "GPIO[32]" has no driver
+    Warning: Bidir "GPIO[33]" has no driver
+    Warning: Bidir "GPIO[34]" has no driver
+    Warning: Bidir "GPIO[35]" has no driver
+    Warning: Bidir "GPIO[36]" has no driver
+    Warning: Bidir "GPIO[37]" has no driver
+    Warning: Bidir "GPIO[38]" has no driver
+    Warning: Bidir "GPIO[39]" has no driver
+    Warning: Bidir "GPIO[4]" has no driver
+    Warning: Bidir "GPIO[6]" has no driver
+    Warning: Bidir "GPIO[7]" has no driver
+Info: Registers with preset signals will power-up high
+Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning: TRI or OPNDRN buffers permanently enabled
+    Warning: Node "COM[0]~synth"
+    Warning: Node "COM[1]~synth"
+    Warning: Node "COM[2]~synth"
+    Warning: Node "COM[3]~synth"
+    Warning: Node "COM[4]~synth"
+    Warning: Node "COM[5]~synth"
+    Warning: Node "COM[6]~synth"
+    Warning: Node "COM[7]~synth"
+    Warning: Node "SEG7[0]~synth"
+    Warning: Node "SEG7[1]~synth"
+    Warning: Node "SEG7[2]~synth"
+    Warning: Node "SEG7[3]~synth"
+    Warning: Node "SEG7[4]~synth"
+    Warning: Node "SEG7[5]~synth"
+    Warning: Node "SEG7[6]~synth"
+    Warning: Node "SEG7[7]~synth"
+    Warning: Node "GPIO[1]~synth"
+    Warning: Node "GPIO[3]~synth"
+    Warning: Node "GPIO[5]~synth"
+Warning: Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+Info: Implemented 306 device resources after synthesis - the final resource count might be different
+    Info: Implemented 5 input pins
+    Info: Implemented 0 output pins
+    Info: Implemented 56 bidirectional pins
+    Info: Implemented 245 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 98 warnings
+    Info: Peak virtual memory: 180 megabytes
+    Info: Processing ended: Thu Mar 10 15:12:40 2011
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
+
+

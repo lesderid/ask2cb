@@ -1,0 +1,26 @@
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_location_assignment PIN_17 -to clk
+set_location_assignment PIN_48 -to c[7]
+set_location_assignment PIN_50 -to c[6]
+set_location_assignment PIN_40 -to c[5]
+set_location_assignment PIN_42 -to c[4]
+set_location_assignment PIN_47 -to c[3]
+set_location_assignment PIN_49 -to c[2]
+set_location_assignment PIN_41 -to c[1]
+set_location_assignment PIN_39 -to c[0]
+
+set_location_assignment PIN_56 -to en[7]
+set_location_assignment PIN_53 -to en[6]
+set_location_assignment PIN_52 -to en[5]
+set_location_assignment PIN_51 -to en[4]
+set_location_assignment PIN_38 -to en[3]
+set_location_assignment PIN_37 -to en[2]
+set_location_assignment PIN_36 -to en[1]
+set_location_assignment PIN_35 -to en[0]
+
+set_location_assignment PIN_26 -to a
+
+set_location_assignment PIN_4 -to b[0]
+set_location_assignment PIN_5 -to b[1]
+set_location_assignment PIN_6 -to c[0]
+set_location_assignment PIN_7 -to c[1]

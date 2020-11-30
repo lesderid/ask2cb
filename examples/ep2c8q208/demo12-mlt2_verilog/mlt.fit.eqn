@@ -1,0 +1,157 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L12 is reduce_or~1036 at LC99
+A1L12_p1_out = b[0] & a[1];
+A1L12_p2_out = a[1] & b[1];
+A1L12_p3_out = b[1] & a[0];
+A1L12_or_out = A1L12_p1_out # A1L12_p2_out # A1L12_p3_out;
+A1L12 = !(A1L12_or_out);
+
+
+--A1L22 is reduce_or~1040 at LC97
+A1L22_p1_out = a[0] & b[1] & !b[0] & !a[1];
+A1L22_p2_out = !a[0] & !b[1] & b[0] & a[1];
+A1L22_or_out = A1L22_p1_out # A1L22_p2_out;
+A1L22 = A1L22_or_out;
+
+
+--A1L32 is reduce_or~1043 at LC85
+A1L32_p1_out = b[0] & a[1] & !a[0] & b[1];
+A1L32_p2_out = !b[0] & a[1] & a[0] & b[1];
+A1L32_or_out = A1L32_p1_out # A1L32_p2_out;
+A1L32 = A1L32_or_out;
+
+
+--A1L42 is reduce_or~1047 at LC86
+A1L42_p1_out = a[0] & b[0] & !a[1];
+A1L42_p2_out = a[0] & !a[1] & b[1];
+A1L42_p3_out = b[0] & a[1] & !b[1];
+A1L42_or_out = A1L42_p1_out # A1L42_p2_out # A1L42_p3_out;
+A1L42 = A1L42_or_out;
+
+
+--A1L52 is reduce_or~1050 at LC88
+A1L52_p1_out = b[0] & a[0] & !a[1] & !b[1];
+A1L52_p2_out = !b[0] & !a[0] & a[1] & b[1];
+A1L52_or_out = A1L52_p1_out # A1L52_p2_out;
+A1L52 = A1L52_or_out;
+
+
+--A1L62 is reduce_or~1053 at LC91
+A1L62_p1_out = a[0] & b[0];
+A1L62_p2_out = !a[0] & !b[0] & a[1] & b[1];
+A1L62_or_out = A1L62_p1_out # A1L62_p2_out;
+A1L62 = A1L62_or_out;
+
+
+--A1L72 is reduce_or~1057 at LC93
+A1L72_p1_out = a[0] & b[0] & a[1] & b[1];
+A1L72_p2_out = a[0] & b[0] & !a[1] & !b[1];
+A1L72_p3_out = !a[0] & !b[0] & a[1] & b[1];
+A1L72_or_out = A1L72_p1_out # A1L72_p2_out # A1L72_p3_out;
+A1L72 = A1L72_or_out;
+
+
+--~VCC~0 is ~VCC~0 at LC94
+~VCC~0_or_out = GND;
+~VCC~0 = !(~VCC~0_or_out);
+
+
+--~GND~0 is ~GND~0 at LC118
+~GND~0_or_out = GND;
+~GND~0 = ~GND~0_or_out;
+
+
+--a[0] is a[0] at PIN_24
+--operation mode is input
+
+a[0] = INPUT();
+
+
+--a[1] is a[1] at PIN_22
+--operation mode is input
+
+a[1] = INPUT();
+
+
+--b[0] is b[0] at PIN_21
+--operation mode is input
+
+b[0] = INPUT();
+
+
+--b[1] is b[1] at PIN_20
+--operation mode is input
+
+b[1] = INPUT();
+
+
+--c[0] is c[0] at PIN_61
+--operation mode is output
+
+c[0] = OUTPUT(~VCC~0);
+
+
+--en is en at PIN_75
+--operation mode is output
+
+en = OUTPUT(~GND~0);
+
+
+--c[1] is c[1] at PIN_64
+--operation mode is output
+
+c[1] = OUTPUT(A1L12);
+
+
+--c[5] is c[5] at PIN_63
+--operation mode is output
+
+c[5] = OUTPUT(A1L22);
+
+
+--c[6] is c[6] at PIN_55
+--operation mode is output
+
+c[6] = OUTPUT(A1L32);
+
+
+--c[2] is c[2] at PIN_56
+--operation mode is output
+
+c[2] = OUTPUT(A1L42);
+
+
+--c[7] is c[7] at PIN_57
+--operation mode is output
+
+c[7] = OUTPUT(A1L52);
+
+
+--c[3] is c[3] at PIN_58
+--operation mode is output
+
+c[3] = OUTPUT(A1L62);
+
+
+--c[4] is c[4] at PIN_60
+--operation mode is output
+
+c[4] = OUTPUT(A1L72);
+
+
+
+
+
+

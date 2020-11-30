@@ -1,0 +1,56 @@
+# Copyright (C) 1991-2006 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		decoder_38_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C8Q208C8
+set_global_assignment -name TOP_LEVEL_ENTITY decoder_38
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 6.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:10:05  AUGUST 16, 2009"
+set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP2"
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 208
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
+set_global_assignment -name VERILOG_FILE decoder_38.v
+set_global_assignment -name MISC_FILE "G:/Verlog/3-8 译码器/decoder_38.dpf"
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name MISC_FILE "G:/做视频教材要用的/vreolg/好的程序/3-8 译码器/decoder_38.dpf"
+set_location_assignment PIN_24 -to key_in[0]
+set_location_assignment PIN_27 -to key_in[1]
+set_location_assignment PIN_130 -to key_in[2]
+set_location_assignment PIN_15 -to out[0]
+set_location_assignment PIN_14 -to out[1]
+set_location_assignment PIN_30 -to out[2]
+set_location_assignment PIN_31 -to out[3]
+set_location_assignment PIN_57 -to out[4]
+set_location_assignment PIN_58 -to out[5]
+set_location_assignment PIN_59 -to out[6]
+set_location_assignment PIN_60 -to out[7]
+set_global_assignment -name DEVICE_FILTER_PACKAGE PQFP
+set_location_assignment PIN_23 -to clk
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON

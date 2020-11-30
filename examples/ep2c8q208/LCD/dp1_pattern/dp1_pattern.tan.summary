@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.085 ns
+From           : GPIO[39]
+To             : adc_spi_controller:u4|transmit_en
+From Clock     : --
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 12.551 ns
+From           : lcd_timing_controller:u6|oLCD_R[7]
+To             : GPIO[9]
+From Clock     : CLOCK_50
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -5.234 ns
+From           : GPIO[39]
+To             : adc_spi_controller:u4|d1_PENIRQ_n
+From Clock     : --
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLOCK_50'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 183.99 MHz ( period = 5.435 ns )
+From           : lcd_timing_controller:u6|x_cnt[2]
+To             : lcd_timing_controller:u6|green_1[5]
+From Clock     : CLOCK_50
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

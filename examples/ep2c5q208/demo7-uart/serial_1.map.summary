@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Aug 17 02:06:48 2010
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Full Version
+Revision Name : serial_1
+Top-level Entity Name : serial_1
+Family : Cyclone II
+Total logic elements : 167
+    Total combinational functions : 157
+    Dedicated logic registers : 78
+Total registers : 78
+Total pins : 21
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

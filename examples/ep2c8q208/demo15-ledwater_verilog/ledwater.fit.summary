@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Oct 26 09:30:27 2010
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Full Version
+Revision Name : ledwater
+Top-level Entity Name : ledwater
+Family : Cyclone II
+Device : EP2C8Q208C8
+Timing Models : Final
+Total logic elements : 34 / 8,256 ( < 1 % )
+    Total combinational functions : 34 / 8,256 ( < 1 % )
+    Dedicated logic registers : 26 / 8,256 ( < 1 % )
+Total registers : 26
+Total pins : 10 / 138 ( 7 % )
+Total virtual pins : 0
+Total memory bits : 0 / 165,888 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 36 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

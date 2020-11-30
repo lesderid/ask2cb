@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Aug 30 01:49:39 2010
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Full Version
+Revision Name : LampsSequencer
+Top-level Entity Name : LampsSequencer
+Family : Cyclone II
+Total logic elements : 58
+    Total combinational functions : 58
+    Dedicated logic registers : 35
+Total registers : 35
+Total pins : 9
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

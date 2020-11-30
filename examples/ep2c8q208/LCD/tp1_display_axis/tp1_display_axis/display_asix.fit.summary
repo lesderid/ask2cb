@@ -1,0 +1,16 @@
+Fitter Status : Failed - Thu Mar 10 15:12:44 2011
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Full Version
+Revision Name : display_asix
+Top-level Entity Name : display_asix
+Family : Cyclone II
+Device : EP2C8Q208C8
+Timing Models : Final
+Total logic elements : 246 / 8,256 ( 3 % )
+    Total combinational functions : 178 / 8,256 ( 2 % )
+    Dedicated logic registers : 180 / 8,256 ( 2 % )
+Total registers : 180
+Total pins : 61 / 138 ( 44 % )
+Total virtual pins : 0
+Total memory bits : 0 / 165,888 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 36 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

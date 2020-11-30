@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Aug 30 23:37:49 2010
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Full Version
+Revision Name : serial_1
+Top-level Entity Name : serial_1
+Family : Cyclone II
+Device : EP2C8Q208C8
+Timing Models : Final
+Total logic elements : 163 / 8,256 ( 2 % )
+    Total combinational functions : 157 / 8,256 ( 2 % )
+    Dedicated logic registers : 78 / 8,256 ( < 1 % )
+Total registers : 78
+Total pins : 21 / 138 ( 15 % )
+Total virtual pins : 0
+Total memory bits : 0 / 165,888 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 36 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

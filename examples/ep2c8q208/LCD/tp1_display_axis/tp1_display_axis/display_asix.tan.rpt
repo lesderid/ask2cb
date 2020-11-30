@@ -1,0 +1,458 @@
+Classic Timing Analyzer report for display_asix
+Thu Mar 10 15:11:49 2011
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'CLOCK_50'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------------+-----------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                              ; To                                ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------------+-----------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 6.067 ns                         ; GPIO[6]                           ; adc_spi_controller:u4|transmit_en ; --         ; CLOCK_50 ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 10.841 ns                        ; SEG7_Driver:u1|oCOM[5]            ; COM[2]                            ; CLOCK_50   ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -5.062 ns                        ; GPIO[7]                           ; adc_spi_controller:u4|madc_out    ; --         ; CLOCK_50 ; 0            ;
+; Clock Setup: 'CLOCK_50'      ; N/A   ; None          ; 151.15 MHz ( period = 6.616 ns ) ; adc_spi_controller:u4|dclk_cnt[6] ; adc_spi_controller:u4|dclk_cnt[8] ; CLOCK_50   ; CLOCK_50 ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                   ;                                   ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------------+-----------------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C8Q208C8        ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLOCK_50        ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLOCK_50'                                                                                                                                                                                                                                                                  ;
++-----------------------------------------+-----------------------------------------------------+------------------------------------+-----------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                               ; To                                      ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+------------------------------------+-----------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 151.15 MHz ( period = 6.616 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|dclk_cnt[0]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.352 ns                ;
+; N/A                                     ; 151.15 MHz ( period = 6.616 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|dclk_cnt[7]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.352 ns                ;
+; N/A                                     ; 151.15 MHz ( period = 6.616 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|dclk_cnt[6]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.352 ns                ;
+; N/A                                     ; 151.15 MHz ( period = 6.616 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|dclk_cnt[5]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.352 ns                ;
+; N/A                                     ; 151.15 MHz ( period = 6.616 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|dclk_cnt[4]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.352 ns                ;
+; N/A                                     ; 151.15 MHz ( period = 6.616 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|dclk_cnt[13]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.352 ns                ;
+; N/A                                     ; 151.15 MHz ( period = 6.616 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|dclk_cnt[15]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.352 ns                ;
+; N/A                                     ; 151.15 MHz ( period = 6.616 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|dclk_cnt[14]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.352 ns                ;
+; N/A                                     ; 151.15 MHz ( period = 6.616 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|dclk_cnt[12]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.352 ns                ;
+; N/A                                     ; 151.15 MHz ( period = 6.616 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|dclk_cnt[3]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.352 ns                ;
+; N/A                                     ; 151.15 MHz ( period = 6.616 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|dclk_cnt[2]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.352 ns                ;
+; N/A                                     ; 151.15 MHz ( period = 6.616 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|dclk_cnt[1]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.352 ns                ;
+; N/A                                     ; 151.15 MHz ( period = 6.616 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|dclk_cnt[9]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.352 ns                ;
+; N/A                                     ; 151.15 MHz ( period = 6.616 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|dclk_cnt[11]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.352 ns                ;
+; N/A                                     ; 151.15 MHz ( period = 6.616 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|dclk_cnt[10]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.352 ns                ;
+; N/A                                     ; 151.15 MHz ( period = 6.616 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|dclk_cnt[8]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.352 ns                ;
+; N/A                                     ; 151.93 MHz ( period = 6.582 ns )                    ; adc_spi_controller:u4|dclk_cnt[9]  ; adc_spi_controller:u4|dclk_cnt[0]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.318 ns                ;
+; N/A                                     ; 151.93 MHz ( period = 6.582 ns )                    ; adc_spi_controller:u4|dclk_cnt[9]  ; adc_spi_controller:u4|dclk_cnt[7]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.318 ns                ;
+; N/A                                     ; 151.93 MHz ( period = 6.582 ns )                    ; adc_spi_controller:u4|dclk_cnt[9]  ; adc_spi_controller:u4|dclk_cnt[6]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.318 ns                ;
+; N/A                                     ; 151.93 MHz ( period = 6.582 ns )                    ; adc_spi_controller:u4|dclk_cnt[9]  ; adc_spi_controller:u4|dclk_cnt[5]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.318 ns                ;
+; N/A                                     ; 151.93 MHz ( period = 6.582 ns )                    ; adc_spi_controller:u4|dclk_cnt[9]  ; adc_spi_controller:u4|dclk_cnt[4]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.318 ns                ;
+; N/A                                     ; 151.93 MHz ( period = 6.582 ns )                    ; adc_spi_controller:u4|dclk_cnt[9]  ; adc_spi_controller:u4|dclk_cnt[13]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.318 ns                ;
+; N/A                                     ; 151.93 MHz ( period = 6.582 ns )                    ; adc_spi_controller:u4|dclk_cnt[9]  ; adc_spi_controller:u4|dclk_cnt[15]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.318 ns                ;
+; N/A                                     ; 151.93 MHz ( period = 6.582 ns )                    ; adc_spi_controller:u4|dclk_cnt[9]  ; adc_spi_controller:u4|dclk_cnt[14]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.318 ns                ;
+; N/A                                     ; 151.93 MHz ( period = 6.582 ns )                    ; adc_spi_controller:u4|dclk_cnt[9]  ; adc_spi_controller:u4|dclk_cnt[12]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.318 ns                ;
+; N/A                                     ; 151.93 MHz ( period = 6.582 ns )                    ; adc_spi_controller:u4|dclk_cnt[9]  ; adc_spi_controller:u4|dclk_cnt[3]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.318 ns                ;
+; N/A                                     ; 151.93 MHz ( period = 6.582 ns )                    ; adc_spi_controller:u4|dclk_cnt[9]  ; adc_spi_controller:u4|dclk_cnt[2]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.318 ns                ;
+; N/A                                     ; 151.93 MHz ( period = 6.582 ns )                    ; adc_spi_controller:u4|dclk_cnt[9]  ; adc_spi_controller:u4|dclk_cnt[1]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.318 ns                ;
+; N/A                                     ; 151.93 MHz ( period = 6.582 ns )                    ; adc_spi_controller:u4|dclk_cnt[9]  ; adc_spi_controller:u4|dclk_cnt[9]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.318 ns                ;
+; N/A                                     ; 151.93 MHz ( period = 6.582 ns )                    ; adc_spi_controller:u4|dclk_cnt[9]  ; adc_spi_controller:u4|dclk_cnt[11]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.318 ns                ;
+; N/A                                     ; 151.93 MHz ( period = 6.582 ns )                    ; adc_spi_controller:u4|dclk_cnt[9]  ; adc_spi_controller:u4|dclk_cnt[10]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.318 ns                ;
+; N/A                                     ; 151.93 MHz ( period = 6.582 ns )                    ; adc_spi_controller:u4|dclk_cnt[9]  ; adc_spi_controller:u4|dclk_cnt[8]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.318 ns                ;
+; N/A                                     ; 153.02 MHz ( period = 6.535 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|dclk_cnt[0]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.271 ns                ;
+; N/A                                     ; 153.02 MHz ( period = 6.535 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|dclk_cnt[7]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.271 ns                ;
+; N/A                                     ; 153.02 MHz ( period = 6.535 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|dclk_cnt[6]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.271 ns                ;
+; N/A                                     ; 153.02 MHz ( period = 6.535 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|dclk_cnt[5]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.271 ns                ;
+; N/A                                     ; 153.02 MHz ( period = 6.535 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|dclk_cnt[4]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.271 ns                ;
+; N/A                                     ; 153.02 MHz ( period = 6.535 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|dclk_cnt[13]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.271 ns                ;
+; N/A                                     ; 153.02 MHz ( period = 6.535 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|dclk_cnt[15]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.271 ns                ;
+; N/A                                     ; 153.02 MHz ( period = 6.535 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|dclk_cnt[14]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.271 ns                ;
+; N/A                                     ; 153.02 MHz ( period = 6.535 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|dclk_cnt[12]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.271 ns                ;
+; N/A                                     ; 153.02 MHz ( period = 6.535 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|dclk_cnt[3]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.271 ns                ;
+; N/A                                     ; 153.02 MHz ( period = 6.535 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|dclk_cnt[2]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.271 ns                ;
+; N/A                                     ; 153.02 MHz ( period = 6.535 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|dclk_cnt[1]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.271 ns                ;
+; N/A                                     ; 153.02 MHz ( period = 6.535 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|dclk_cnt[9]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.271 ns                ;
+; N/A                                     ; 153.02 MHz ( period = 6.535 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|dclk_cnt[11]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.271 ns                ;
+; N/A                                     ; 153.02 MHz ( period = 6.535 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|dclk_cnt[10]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.271 ns                ;
+; N/A                                     ; 153.02 MHz ( period = 6.535 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|dclk_cnt[8]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.271 ns                ;
+; N/A                                     ; 154.23 MHz ( period = 6.484 ns )                    ; adc_spi_controller:u4|dclk_cnt[2]  ; adc_spi_controller:u4|dclk_cnt[0]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.220 ns                ;
+; N/A                                     ; 154.23 MHz ( period = 6.484 ns )                    ; adc_spi_controller:u4|dclk_cnt[2]  ; adc_spi_controller:u4|dclk_cnt[7]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.220 ns                ;
+; N/A                                     ; 154.23 MHz ( period = 6.484 ns )                    ; adc_spi_controller:u4|dclk_cnt[2]  ; adc_spi_controller:u4|dclk_cnt[6]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.220 ns                ;
+; N/A                                     ; 154.23 MHz ( period = 6.484 ns )                    ; adc_spi_controller:u4|dclk_cnt[2]  ; adc_spi_controller:u4|dclk_cnt[5]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.220 ns                ;
+; N/A                                     ; 154.23 MHz ( period = 6.484 ns )                    ; adc_spi_controller:u4|dclk_cnt[2]  ; adc_spi_controller:u4|dclk_cnt[4]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.220 ns                ;
+; N/A                                     ; 154.23 MHz ( period = 6.484 ns )                    ; adc_spi_controller:u4|dclk_cnt[2]  ; adc_spi_controller:u4|dclk_cnt[13]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.220 ns                ;
+; N/A                                     ; 154.23 MHz ( period = 6.484 ns )                    ; adc_spi_controller:u4|dclk_cnt[2]  ; adc_spi_controller:u4|dclk_cnt[15]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.220 ns                ;
+; N/A                                     ; 154.23 MHz ( period = 6.484 ns )                    ; adc_spi_controller:u4|dclk_cnt[2]  ; adc_spi_controller:u4|dclk_cnt[14]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.220 ns                ;
+; N/A                                     ; 154.23 MHz ( period = 6.484 ns )                    ; adc_spi_controller:u4|dclk_cnt[2]  ; adc_spi_controller:u4|dclk_cnt[12]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.220 ns                ;
+; N/A                                     ; 154.23 MHz ( period = 6.484 ns )                    ; adc_spi_controller:u4|dclk_cnt[2]  ; adc_spi_controller:u4|dclk_cnt[3]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.220 ns                ;
+; N/A                                     ; 154.23 MHz ( period = 6.484 ns )                    ; adc_spi_controller:u4|dclk_cnt[2]  ; adc_spi_controller:u4|dclk_cnt[2]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.220 ns                ;
+; N/A                                     ; 154.23 MHz ( period = 6.484 ns )                    ; adc_spi_controller:u4|dclk_cnt[2]  ; adc_spi_controller:u4|dclk_cnt[1]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.220 ns                ;
+; N/A                                     ; 154.23 MHz ( period = 6.484 ns )                    ; adc_spi_controller:u4|dclk_cnt[2]  ; adc_spi_controller:u4|dclk_cnt[9]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.220 ns                ;
+; N/A                                     ; 154.23 MHz ( period = 6.484 ns )                    ; adc_spi_controller:u4|dclk_cnt[2]  ; adc_spi_controller:u4|dclk_cnt[11]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.220 ns                ;
+; N/A                                     ; 154.23 MHz ( period = 6.484 ns )                    ; adc_spi_controller:u4|dclk_cnt[2]  ; adc_spi_controller:u4|dclk_cnt[10]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.220 ns                ;
+; N/A                                     ; 154.23 MHz ( period = 6.484 ns )                    ; adc_spi_controller:u4|dclk_cnt[2]  ; adc_spi_controller:u4|dclk_cnt[8]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.220 ns                ;
+; N/A                                     ; 154.25 MHz ( period = 6.483 ns )                    ; adc_spi_controller:u4|dclk_cnt[3]  ; adc_spi_controller:u4|dclk_cnt[0]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.219 ns                ;
+; N/A                                     ; 154.25 MHz ( period = 6.483 ns )                    ; adc_spi_controller:u4|dclk_cnt[3]  ; adc_spi_controller:u4|dclk_cnt[7]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.219 ns                ;
+; N/A                                     ; 154.25 MHz ( period = 6.483 ns )                    ; adc_spi_controller:u4|dclk_cnt[3]  ; adc_spi_controller:u4|dclk_cnt[6]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.219 ns                ;
+; N/A                                     ; 154.25 MHz ( period = 6.483 ns )                    ; adc_spi_controller:u4|dclk_cnt[3]  ; adc_spi_controller:u4|dclk_cnt[5]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.219 ns                ;
+; N/A                                     ; 154.25 MHz ( period = 6.483 ns )                    ; adc_spi_controller:u4|dclk_cnt[3]  ; adc_spi_controller:u4|dclk_cnt[4]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.219 ns                ;
+; N/A                                     ; 154.25 MHz ( period = 6.483 ns )                    ; adc_spi_controller:u4|dclk_cnt[3]  ; adc_spi_controller:u4|dclk_cnt[13]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.219 ns                ;
+; N/A                                     ; 154.25 MHz ( period = 6.483 ns )                    ; adc_spi_controller:u4|dclk_cnt[3]  ; adc_spi_controller:u4|dclk_cnt[15]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.219 ns                ;
+; N/A                                     ; 154.25 MHz ( period = 6.483 ns )                    ; adc_spi_controller:u4|dclk_cnt[3]  ; adc_spi_controller:u4|dclk_cnt[14]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.219 ns                ;
+; N/A                                     ; 154.25 MHz ( period = 6.483 ns )                    ; adc_spi_controller:u4|dclk_cnt[3]  ; adc_spi_controller:u4|dclk_cnt[12]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.219 ns                ;
+; N/A                                     ; 154.25 MHz ( period = 6.483 ns )                    ; adc_spi_controller:u4|dclk_cnt[3]  ; adc_spi_controller:u4|dclk_cnt[3]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.219 ns                ;
+; N/A                                     ; 154.25 MHz ( period = 6.483 ns )                    ; adc_spi_controller:u4|dclk_cnt[3]  ; adc_spi_controller:u4|dclk_cnt[2]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.219 ns                ;
+; N/A                                     ; 154.25 MHz ( period = 6.483 ns )                    ; adc_spi_controller:u4|dclk_cnt[3]  ; adc_spi_controller:u4|dclk_cnt[1]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.219 ns                ;
+; N/A                                     ; 154.25 MHz ( period = 6.483 ns )                    ; adc_spi_controller:u4|dclk_cnt[3]  ; adc_spi_controller:u4|dclk_cnt[9]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.219 ns                ;
+; N/A                                     ; 154.25 MHz ( period = 6.483 ns )                    ; adc_spi_controller:u4|dclk_cnt[3]  ; adc_spi_controller:u4|dclk_cnt[11]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.219 ns                ;
+; N/A                                     ; 154.25 MHz ( period = 6.483 ns )                    ; adc_spi_controller:u4|dclk_cnt[3]  ; adc_spi_controller:u4|dclk_cnt[10]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.219 ns                ;
+; N/A                                     ; 154.25 MHz ( period = 6.483 ns )                    ; adc_spi_controller:u4|dclk_cnt[3]  ; adc_spi_controller:u4|dclk_cnt[8]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.219 ns                ;
+; N/A                                     ; 155.21 MHz ( period = 6.443 ns )                    ; adc_spi_controller:u4|dclk_cnt[0]  ; adc_spi_controller:u4|dclk_cnt[0]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.179 ns                ;
+; N/A                                     ; 155.21 MHz ( period = 6.443 ns )                    ; adc_spi_controller:u4|dclk_cnt[0]  ; adc_spi_controller:u4|dclk_cnt[7]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.179 ns                ;
+; N/A                                     ; 155.21 MHz ( period = 6.443 ns )                    ; adc_spi_controller:u4|dclk_cnt[0]  ; adc_spi_controller:u4|dclk_cnt[6]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.179 ns                ;
+; N/A                                     ; 155.21 MHz ( period = 6.443 ns )                    ; adc_spi_controller:u4|dclk_cnt[0]  ; adc_spi_controller:u4|dclk_cnt[5]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.179 ns                ;
+; N/A                                     ; 155.21 MHz ( period = 6.443 ns )                    ; adc_spi_controller:u4|dclk_cnt[0]  ; adc_spi_controller:u4|dclk_cnt[4]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.179 ns                ;
+; N/A                                     ; 155.21 MHz ( period = 6.443 ns )                    ; adc_spi_controller:u4|dclk_cnt[0]  ; adc_spi_controller:u4|dclk_cnt[13]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.179 ns                ;
+; N/A                                     ; 155.21 MHz ( period = 6.443 ns )                    ; adc_spi_controller:u4|dclk_cnt[0]  ; adc_spi_controller:u4|dclk_cnt[15]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.179 ns                ;
+; N/A                                     ; 155.21 MHz ( period = 6.443 ns )                    ; adc_spi_controller:u4|dclk_cnt[0]  ; adc_spi_controller:u4|dclk_cnt[14]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.179 ns                ;
+; N/A                                     ; 155.21 MHz ( period = 6.443 ns )                    ; adc_spi_controller:u4|dclk_cnt[0]  ; adc_spi_controller:u4|dclk_cnt[12]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.179 ns                ;
+; N/A                                     ; 155.21 MHz ( period = 6.443 ns )                    ; adc_spi_controller:u4|dclk_cnt[0]  ; adc_spi_controller:u4|dclk_cnt[3]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.179 ns                ;
+; N/A                                     ; 155.21 MHz ( period = 6.443 ns )                    ; adc_spi_controller:u4|dclk_cnt[0]  ; adc_spi_controller:u4|dclk_cnt[2]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.179 ns                ;
+; N/A                                     ; 155.21 MHz ( period = 6.443 ns )                    ; adc_spi_controller:u4|dclk_cnt[0]  ; adc_spi_controller:u4|dclk_cnt[1]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.179 ns                ;
+; N/A                                     ; 155.21 MHz ( period = 6.443 ns )                    ; adc_spi_controller:u4|dclk_cnt[0]  ; adc_spi_controller:u4|dclk_cnt[9]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.179 ns                ;
+; N/A                                     ; 155.21 MHz ( period = 6.443 ns )                    ; adc_spi_controller:u4|dclk_cnt[0]  ; adc_spi_controller:u4|dclk_cnt[11]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.179 ns                ;
+; N/A                                     ; 155.21 MHz ( period = 6.443 ns )                    ; adc_spi_controller:u4|dclk_cnt[0]  ; adc_spi_controller:u4|dclk_cnt[10]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.179 ns                ;
+; N/A                                     ; 155.21 MHz ( period = 6.443 ns )                    ; adc_spi_controller:u4|dclk_cnt[0]  ; adc_spi_controller:u4|dclk_cnt[8]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.179 ns                ;
+; N/A                                     ; 157.28 MHz ( period = 6.358 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|dclk_cnt[0]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.094 ns                ;
+; N/A                                     ; 157.28 MHz ( period = 6.358 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|dclk_cnt[7]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.094 ns                ;
+; N/A                                     ; 157.28 MHz ( period = 6.358 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|dclk_cnt[6]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.094 ns                ;
+; N/A                                     ; 157.28 MHz ( period = 6.358 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|dclk_cnt[5]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.094 ns                ;
+; N/A                                     ; 157.28 MHz ( period = 6.358 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|dclk_cnt[4]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.094 ns                ;
+; N/A                                     ; 157.28 MHz ( period = 6.358 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|dclk_cnt[13]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.094 ns                ;
+; N/A                                     ; 157.28 MHz ( period = 6.358 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|dclk_cnt[15]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.094 ns                ;
+; N/A                                     ; 157.28 MHz ( period = 6.358 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|dclk_cnt[14]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.094 ns                ;
+; N/A                                     ; 157.28 MHz ( period = 6.358 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|dclk_cnt[12]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.094 ns                ;
+; N/A                                     ; 157.28 MHz ( period = 6.358 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|dclk_cnt[3]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.094 ns                ;
+; N/A                                     ; 157.28 MHz ( period = 6.358 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|dclk_cnt[2]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.094 ns                ;
+; N/A                                     ; 157.28 MHz ( period = 6.358 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|dclk_cnt[1]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.094 ns                ;
+; N/A                                     ; 157.28 MHz ( period = 6.358 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|dclk_cnt[9]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.094 ns                ;
+; N/A                                     ; 157.28 MHz ( period = 6.358 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|dclk_cnt[11]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.094 ns                ;
+; N/A                                     ; 157.28 MHz ( period = 6.358 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|dclk_cnt[10]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.094 ns                ;
+; N/A                                     ; 157.28 MHz ( period = 6.358 ns )                    ; adc_spi_controller:u4|dclk_cnt[5]  ; adc_spi_controller:u4|dclk_cnt[8]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.094 ns                ;
+; N/A                                     ; 157.46 MHz ( period = 6.351 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|dclk_cnt[0]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.087 ns                ;
+; N/A                                     ; 157.46 MHz ( period = 6.351 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|dclk_cnt[7]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.087 ns                ;
+; N/A                                     ; 157.46 MHz ( period = 6.351 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|dclk_cnt[6]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.087 ns                ;
+; N/A                                     ; 157.46 MHz ( period = 6.351 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|dclk_cnt[5]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.087 ns                ;
+; N/A                                     ; 157.46 MHz ( period = 6.351 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|dclk_cnt[4]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.087 ns                ;
+; N/A                                     ; 157.46 MHz ( period = 6.351 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|dclk_cnt[13]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.087 ns                ;
+; N/A                                     ; 157.46 MHz ( period = 6.351 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|dclk_cnt[15]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.087 ns                ;
+; N/A                                     ; 157.46 MHz ( period = 6.351 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|dclk_cnt[14]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.087 ns                ;
+; N/A                                     ; 157.46 MHz ( period = 6.351 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|dclk_cnt[12]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.087 ns                ;
+; N/A                                     ; 157.46 MHz ( period = 6.351 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|dclk_cnt[3]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.087 ns                ;
+; N/A                                     ; 157.46 MHz ( period = 6.351 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|dclk_cnt[2]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.087 ns                ;
+; N/A                                     ; 157.46 MHz ( period = 6.351 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|dclk_cnt[1]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.087 ns                ;
+; N/A                                     ; 157.46 MHz ( period = 6.351 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|dclk_cnt[9]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.087 ns                ;
+; N/A                                     ; 157.46 MHz ( period = 6.351 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|dclk_cnt[11]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.087 ns                ;
+; N/A                                     ; 157.46 MHz ( period = 6.351 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|dclk_cnt[10]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.087 ns                ;
+; N/A                                     ; 157.46 MHz ( period = 6.351 ns )                    ; adc_spi_controller:u4|dclk_cnt[1]  ; adc_spi_controller:u4|dclk_cnt[8]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.087 ns                ;
+; N/A                                     ; 157.60 MHz ( period = 6.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[14] ; adc_spi_controller:u4|dclk_cnt[0]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.081 ns                ;
+; N/A                                     ; 157.60 MHz ( period = 6.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[14] ; adc_spi_controller:u4|dclk_cnt[7]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.081 ns                ;
+; N/A                                     ; 157.60 MHz ( period = 6.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[14] ; adc_spi_controller:u4|dclk_cnt[6]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.081 ns                ;
+; N/A                                     ; 157.60 MHz ( period = 6.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[14] ; adc_spi_controller:u4|dclk_cnt[5]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.081 ns                ;
+; N/A                                     ; 157.60 MHz ( period = 6.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[14] ; adc_spi_controller:u4|dclk_cnt[4]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.081 ns                ;
+; N/A                                     ; 157.60 MHz ( period = 6.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[14] ; adc_spi_controller:u4|dclk_cnt[13]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.081 ns                ;
+; N/A                                     ; 157.60 MHz ( period = 6.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[14] ; adc_spi_controller:u4|dclk_cnt[15]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.081 ns                ;
+; N/A                                     ; 157.60 MHz ( period = 6.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[14] ; adc_spi_controller:u4|dclk_cnt[14]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.081 ns                ;
+; N/A                                     ; 157.60 MHz ( period = 6.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[14] ; adc_spi_controller:u4|dclk_cnt[12]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.081 ns                ;
+; N/A                                     ; 157.60 MHz ( period = 6.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[14] ; adc_spi_controller:u4|dclk_cnt[3]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.081 ns                ;
+; N/A                                     ; 157.60 MHz ( period = 6.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[14] ; adc_spi_controller:u4|dclk_cnt[2]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.081 ns                ;
+; N/A                                     ; 157.60 MHz ( period = 6.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[14] ; adc_spi_controller:u4|dclk_cnt[1]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.081 ns                ;
+; N/A                                     ; 157.60 MHz ( period = 6.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[14] ; adc_spi_controller:u4|dclk_cnt[9]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.081 ns                ;
+; N/A                                     ; 157.60 MHz ( period = 6.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[14] ; adc_spi_controller:u4|dclk_cnt[11]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.081 ns                ;
+; N/A                                     ; 157.60 MHz ( period = 6.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[14] ; adc_spi_controller:u4|dclk_cnt[10]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.081 ns                ;
+; N/A                                     ; 157.60 MHz ( period = 6.345 ns )                    ; adc_spi_controller:u4|dclk_cnt[14] ; adc_spi_controller:u4|dclk_cnt[8]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.081 ns                ;
+; N/A                                     ; 158.33 MHz ( period = 6.316 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|mdata_in[7]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.070 ns                ;
+; N/A                                     ; 158.33 MHz ( period = 6.316 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|mdata_in[2]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.070 ns                ;
+; N/A                                     ; 158.33 MHz ( period = 6.316 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|mdata_in[1]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.070 ns                ;
+; N/A                                     ; 158.48 MHz ( period = 6.310 ns )                    ; adc_spi_controller:u4|dclk_cnt[13] ; adc_spi_controller:u4|dclk_cnt[0]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.046 ns                ;
+; N/A                                     ; 158.48 MHz ( period = 6.310 ns )                    ; adc_spi_controller:u4|dclk_cnt[13] ; adc_spi_controller:u4|dclk_cnt[7]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.046 ns                ;
+; N/A                                     ; 158.48 MHz ( period = 6.310 ns )                    ; adc_spi_controller:u4|dclk_cnt[13] ; adc_spi_controller:u4|dclk_cnt[6]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.046 ns                ;
+; N/A                                     ; 158.48 MHz ( period = 6.310 ns )                    ; adc_spi_controller:u4|dclk_cnt[13] ; adc_spi_controller:u4|dclk_cnt[5]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.046 ns                ;
+; N/A                                     ; 158.48 MHz ( period = 6.310 ns )                    ; adc_spi_controller:u4|dclk_cnt[13] ; adc_spi_controller:u4|dclk_cnt[4]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.046 ns                ;
+; N/A                                     ; 158.48 MHz ( period = 6.310 ns )                    ; adc_spi_controller:u4|dclk_cnt[13] ; adc_spi_controller:u4|dclk_cnt[13]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.046 ns                ;
+; N/A                                     ; 158.48 MHz ( period = 6.310 ns )                    ; adc_spi_controller:u4|dclk_cnt[13] ; adc_spi_controller:u4|dclk_cnt[15]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.046 ns                ;
+; N/A                                     ; 158.48 MHz ( period = 6.310 ns )                    ; adc_spi_controller:u4|dclk_cnt[13] ; adc_spi_controller:u4|dclk_cnt[14]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.046 ns                ;
+; N/A                                     ; 158.48 MHz ( period = 6.310 ns )                    ; adc_spi_controller:u4|dclk_cnt[13] ; adc_spi_controller:u4|dclk_cnt[12]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.046 ns                ;
+; N/A                                     ; 158.48 MHz ( period = 6.310 ns )                    ; adc_spi_controller:u4|dclk_cnt[13] ; adc_spi_controller:u4|dclk_cnt[3]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.046 ns                ;
+; N/A                                     ; 158.48 MHz ( period = 6.310 ns )                    ; adc_spi_controller:u4|dclk_cnt[13] ; adc_spi_controller:u4|dclk_cnt[2]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.046 ns                ;
+; N/A                                     ; 158.48 MHz ( period = 6.310 ns )                    ; adc_spi_controller:u4|dclk_cnt[13] ; adc_spi_controller:u4|dclk_cnt[1]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.046 ns                ;
+; N/A                                     ; 158.48 MHz ( period = 6.310 ns )                    ; adc_spi_controller:u4|dclk_cnt[13] ; adc_spi_controller:u4|dclk_cnt[9]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.046 ns                ;
+; N/A                                     ; 158.48 MHz ( period = 6.310 ns )                    ; adc_spi_controller:u4|dclk_cnt[13] ; adc_spi_controller:u4|dclk_cnt[11]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.046 ns                ;
+; N/A                                     ; 158.48 MHz ( period = 6.310 ns )                    ; adc_spi_controller:u4|dclk_cnt[13] ; adc_spi_controller:u4|dclk_cnt[10]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.046 ns                ;
+; N/A                                     ; 158.48 MHz ( period = 6.310 ns )                    ; adc_spi_controller:u4|dclk_cnt[13] ; adc_spi_controller:u4|dclk_cnt[8]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.046 ns                ;
+; N/A                                     ; 159.18 MHz ( period = 6.282 ns )                    ; adc_spi_controller:u4|dclk_cnt[9]  ; adc_spi_controller:u4|mdata_in[7]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.036 ns                ;
+; N/A                                     ; 159.18 MHz ( period = 6.282 ns )                    ; adc_spi_controller:u4|dclk_cnt[9]  ; adc_spi_controller:u4|mdata_in[2]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.036 ns                ;
+; N/A                                     ; 159.18 MHz ( period = 6.282 ns )                    ; adc_spi_controller:u4|dclk_cnt[9]  ; adc_spi_controller:u4|mdata_in[1]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.036 ns                ;
+; N/A                                     ; 160.05 MHz ( period = 6.248 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|my_coordinate[13] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.985 ns                ;
+; N/A                                     ; 160.05 MHz ( period = 6.248 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|my_coordinate[0]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.985 ns                ;
+; N/A                                     ; 160.05 MHz ( period = 6.248 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|my_coordinate[12] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.985 ns                ;
+; N/A                                     ; 160.05 MHz ( period = 6.248 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|my_coordinate[4]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.985 ns                ;
+; N/A                                     ; 160.05 MHz ( period = 6.248 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|my_coordinate[15] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.985 ns                ;
+; N/A                                     ; 160.05 MHz ( period = 6.248 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|my_coordinate[7]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.985 ns                ;
+; N/A                                     ; 160.05 MHz ( period = 6.248 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|my_coordinate[3]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.985 ns                ;
+; N/A                                     ; 160.05 MHz ( period = 6.248 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|my_coordinate[1]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.985 ns                ;
+; N/A                                     ; 160.05 MHz ( period = 6.248 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|my_coordinate[5]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.985 ns                ;
+; N/A                                     ; 160.05 MHz ( period = 6.248 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|my_coordinate[14] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.985 ns                ;
+; N/A                                     ; 160.05 MHz ( period = 6.248 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|my_coordinate[6]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.985 ns                ;
+; N/A                                     ; 160.05 MHz ( period = 6.248 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|my_coordinate[2]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.985 ns                ;
+; N/A                                     ; 160.05 MHz ( period = 6.248 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|my_coordinate[8]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.985 ns                ;
+; N/A                                     ; 160.05 MHz ( period = 6.248 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|my_coordinate[11] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.985 ns                ;
+; N/A                                     ; 160.05 MHz ( period = 6.248 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|my_coordinate[9]  ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.985 ns                ;
+; N/A                                     ; 160.05 MHz ( period = 6.248 ns )                    ; adc_spi_controller:u4|dclk_cnt[6]  ; adc_spi_controller:u4|my_coordinate[10] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.985 ns                ;
+; N/A                                     ; 160.13 MHz ( period = 6.245 ns )                    ; adc_spi_controller:u4|dclk_cnt[7]  ; adc_spi_controller:u4|dclk_cnt[0]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.981 ns                ;
+; N/A                                     ; 160.13 MHz ( period = 6.245 ns )                    ; adc_spi_controller:u4|dclk_cnt[7]  ; adc_spi_controller:u4|dclk_cnt[7]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.981 ns                ;
+; N/A                                     ; 160.13 MHz ( period = 6.245 ns )                    ; adc_spi_controller:u4|dclk_cnt[7]  ; adc_spi_controller:u4|dclk_cnt[6]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.981 ns                ;
+; N/A                                     ; 160.13 MHz ( period = 6.245 ns )                    ; adc_spi_controller:u4|dclk_cnt[7]  ; adc_spi_controller:u4|dclk_cnt[5]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.981 ns                ;
+; N/A                                     ; 160.13 MHz ( period = 6.245 ns )                    ; adc_spi_controller:u4|dclk_cnt[7]  ; adc_spi_controller:u4|dclk_cnt[4]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.981 ns                ;
+; N/A                                     ; 160.13 MHz ( period = 6.245 ns )                    ; adc_spi_controller:u4|dclk_cnt[7]  ; adc_spi_controller:u4|dclk_cnt[13]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.981 ns                ;
+; N/A                                     ; 160.13 MHz ( period = 6.245 ns )                    ; adc_spi_controller:u4|dclk_cnt[7]  ; adc_spi_controller:u4|dclk_cnt[15]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.981 ns                ;
+; N/A                                     ; 160.13 MHz ( period = 6.245 ns )                    ; adc_spi_controller:u4|dclk_cnt[7]  ; adc_spi_controller:u4|dclk_cnt[14]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.981 ns                ;
+; N/A                                     ; 160.13 MHz ( period = 6.245 ns )                    ; adc_spi_controller:u4|dclk_cnt[7]  ; adc_spi_controller:u4|dclk_cnt[12]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.981 ns                ;
+; N/A                                     ; 160.13 MHz ( period = 6.245 ns )                    ; adc_spi_controller:u4|dclk_cnt[7]  ; adc_spi_controller:u4|dclk_cnt[3]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.981 ns                ;
+; N/A                                     ; 160.13 MHz ( period = 6.245 ns )                    ; adc_spi_controller:u4|dclk_cnt[7]  ; adc_spi_controller:u4|dclk_cnt[2]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.981 ns                ;
+; N/A                                     ; 160.13 MHz ( period = 6.245 ns )                    ; adc_spi_controller:u4|dclk_cnt[7]  ; adc_spi_controller:u4|dclk_cnt[1]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.981 ns                ;
+; N/A                                     ; 160.13 MHz ( period = 6.245 ns )                    ; adc_spi_controller:u4|dclk_cnt[7]  ; adc_spi_controller:u4|dclk_cnt[9]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.981 ns                ;
+; N/A                                     ; 160.13 MHz ( period = 6.245 ns )                    ; adc_spi_controller:u4|dclk_cnt[7]  ; adc_spi_controller:u4|dclk_cnt[11]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.981 ns                ;
+; N/A                                     ; 160.13 MHz ( period = 6.245 ns )                    ; adc_spi_controller:u4|dclk_cnt[7]  ; adc_spi_controller:u4|dclk_cnt[10]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.981 ns                ;
+; N/A                                     ; 160.13 MHz ( period = 6.245 ns )                    ; adc_spi_controller:u4|dclk_cnt[7]  ; adc_spi_controller:u4|dclk_cnt[8]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.981 ns                ;
+; N/A                                     ; 160.38 MHz ( period = 6.235 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|mdata_in[7]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.989 ns                ;
+; N/A                                     ; 160.38 MHz ( period = 6.235 ns )                    ; adc_spi_controller:u4|dclk_cnt[11] ; adc_spi_controller:u4|mdata_in[2]       ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.989 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                    ;                                         ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+------------------------------------+-----------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; tsu                                                                                        ;
++-------+--------------+------------+---------+-----------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From    ; To                                ; To Clock ;
++-------+--------------+------------+---------+-----------------------------------+----------+
+; N/A   ; None         ; 6.067 ns   ; GPIO[6] ; adc_spi_controller:u4|transmit_en ; CLOCK_50 ;
+; N/A   ; None         ; 5.482 ns   ; GPIO[6] ; adc_spi_controller:u4|d1_PENIRQ_n ; CLOCK_50 ;
+; N/A   ; None         ; 5.328 ns   ; GPIO[7] ; adc_spi_controller:u4|madc_out    ; CLOCK_50 ;
++-------+--------------+------------+---------+-----------------------------------+----------+
+
+
++----------------------------------------------------------------------------------------------+
+; tco                                                                                          ;
++-------+--------------+------------+-----------------------------------+---------+------------+
+; Slack ; Required tco ; Actual tco ; From                              ; To      ; From Clock ;
++-------+--------------+------------+-----------------------------------+---------+------------+
+; N/A   ; None         ; 10.841 ns  ; SEG7_Driver:u1|oCOM[5]            ; COM[2]  ; CLOCK_50   ;
+; N/A   ; None         ; 10.718 ns  ; SEG7_Driver:u1|oCOM[6]            ; COM[1]  ; CLOCK_50   ;
+; N/A   ; None         ; 10.283 ns  ; SEG7_Driver:u1|oCOM[4]            ; COM[3]  ; CLOCK_50   ;
+; N/A   ; None         ; 9.945 ns   ; SEG7_Driver:u1|oCOM[3]            ; COM[4]  ; CLOCK_50   ;
+; N/A   ; None         ; 9.930 ns   ; SEG7_Driver:u1|oCOM[2]            ; COM[5]  ; CLOCK_50   ;
+; N/A   ; None         ; 9.924 ns   ; SEG7_Driver:u1|oCOM[1]            ; COM[6]  ; CLOCK_50   ;
+; N/A   ; None         ; 9.918 ns   ; SEG7_Driver:u1|oCOM[0]            ; COM[7]  ; CLOCK_50   ;
+; N/A   ; None         ; 9.915 ns   ; SEG7_Driver:u1|oCOM[7]            ; COM[0]  ; CLOCK_50   ;
+; N/A   ; None         ; 9.663 ns   ; adc_spi_controller:u4|mdclk       ; GPIO[1] ; CLOCK_50   ;
+; N/A   ; None         ; 9.630 ns   ; adc_spi_controller:u4|mdata_in[7] ; GPIO[5] ; CLOCK_50   ;
+; N/A   ; None         ; 9.550 ns   ; SEG7_Driver:u1|oSEG[1]            ; SEG7[1] ; CLOCK_50   ;
+; N/A   ; None         ; 9.196 ns   ; SEG7_Driver:u1|oSEG[2]            ; SEG7[2] ; CLOCK_50   ;
+; N/A   ; None         ; 8.930 ns   ; SEG7_Driver:u1|oSEG[5]            ; SEG7[5] ; CLOCK_50   ;
+; N/A   ; None         ; 8.917 ns   ; SEG7_Driver:u1|oSEG[4]            ; SEG7[4] ; CLOCK_50   ;
+; N/A   ; None         ; 8.888 ns   ; SEG7_Driver:u1|oSEG[0]            ; SEG7[0] ; CLOCK_50   ;
+; N/A   ; None         ; 8.862 ns   ; adc_spi_controller:u4|mcs         ; GPIO[3] ; CLOCK_50   ;
+; N/A   ; None         ; 8.601 ns   ; SEG7_Driver:u1|oSEG[3]            ; SEG7[3] ; CLOCK_50   ;
+; N/A   ; None         ; 8.566 ns   ; SEG7_Driver:u1|oSEG[6]            ; SEG7[6] ; CLOCK_50   ;
+; N/A   ; None         ; 7.388 ns   ; SEG7_Driver:u1|oSEG[7]            ; SEG7[7] ; CLOCK_50   ;
++-------+--------------+------------+-----------------------------------+---------+------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; th                                                                                               ;
++---------------+-------------+-----------+---------+-----------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From    ; To                                ; To Clock ;
++---------------+-------------+-----------+---------+-----------------------------------+----------+
+; N/A           ; None        ; -5.062 ns ; GPIO[7] ; adc_spi_controller:u4|madc_out    ; CLOCK_50 ;
+; N/A           ; None        ; -5.216 ns ; GPIO[6] ; adc_spi_controller:u4|d1_PENIRQ_n ; CLOCK_50 ;
+; N/A           ; None        ; -5.801 ns ; GPIO[6] ; adc_spi_controller:u4|transmit_en ; CLOCK_50 ;
++---------------+-------------+-----------+---------+-----------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
+    Info: Processing started: Thu Mar 10 15:11:48 2011
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off display_asix -c display_asix --timing_analysis_only
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLOCK_50" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "SEG7_Driver:u1|mSCAN_CLK" as buffer
+Info: Clock "CLOCK_50" has Internal fmax of 151.15 MHz between source register "adc_spi_controller:u4|dclk_cnt[6]" and destination register "adc_spi_controller:u4|dclk_cnt[0]" (period= 6.616 ns)
+    Info: + Longest register to register delay is 6.352 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X23_Y10_N13; Fanout = 3; REG Node = 'adc_spi_controller:u4|dclk_cnt[6]'
+        Info: 2: + IC(1.076 ns) + CELL(0.624 ns) = 1.700 ns; Loc. = LCCOMB_X24_Y10_N16; Fanout = 1; COMB Node = 'adc_spi_controller:u4|Equal0~1'
+        Info: 3: + IC(1.104 ns) + CELL(0.534 ns) = 3.338 ns; Loc. = LCCOMB_X23_Y9_N2; Fanout = 14; COMB Node = 'adc_spi_controller:u4|Equal0~4'
+        Info: 4: + IC(1.130 ns) + CELL(0.206 ns) = 4.674 ns; Loc. = LCCOMB_X23_Y11_N28; Fanout = 16; COMB Node = 'adc_spi_controller:u4|dclk_cnt[14]~50'
+        Info: 5: + IC(1.018 ns) + CELL(0.660 ns) = 6.352 ns; Loc. = LCFF_X23_Y10_N1; Fanout = 3; REG Node = 'adc_spi_controller:u4|dclk_cnt[0]'
+        Info: Total cell delay = 2.024 ns ( 31.86 % )
+        Info: Total interconnect delay = 4.328 ns ( 68.14 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "CLOCK_50" to destination register is 2.814 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.140 ns) = 1.140 ns; Loc. = PIN_23; Fanout = 2; CLK Node = 'CLOCK_50'
+            Info: 2: + IC(0.139 ns) + CELL(0.000 ns) = 1.279 ns; Loc. = CLKCTRL_G2; Fanout = 168; COMB Node = 'CLOCK_50~clkctrl'
+            Info: 3: + IC(0.869 ns) + CELL(0.666 ns) = 2.814 ns; Loc. = LCFF_X23_Y10_N1; Fanout = 3; REG Node = 'adc_spi_controller:u4|dclk_cnt[0]'
+            Info: Total cell delay = 1.806 ns ( 64.18 % )
+            Info: Total interconnect delay = 1.008 ns ( 35.82 % )
+        Info: - Longest clock path from clock "CLOCK_50" to source register is 2.814 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.140 ns) = 1.140 ns; Loc. = PIN_23; Fanout = 2; CLK Node = 'CLOCK_50'
+            Info: 2: + IC(0.139 ns) + CELL(0.000 ns) = 1.279 ns; Loc. = CLKCTRL_G2; Fanout = 168; COMB Node = 'CLOCK_50~clkctrl'
+            Info: 3: + IC(0.869 ns) + CELL(0.666 ns) = 2.814 ns; Loc. = LCFF_X23_Y10_N13; Fanout = 3; REG Node = 'adc_spi_controller:u4|dclk_cnt[6]'
+            Info: Total cell delay = 1.806 ns ( 64.18 % )
+            Info: Total interconnect delay = 1.008 ns ( 35.82 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Micro setup delay of destination is -0.040 ns
+Info: tsu for register "adc_spi_controller:u4|transmit_en" (data pin = "GPIO[6]", clock pin = "CLOCK_50") is 6.067 ns
+    Info: + Longest pin to register delay is 8.939 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = PIN_207; Fanout = 1; PIN Node = 'GPIO[6]'
+        Info: 2: + IC(0.000 ns) + CELL(1.014 ns) = 1.014 ns; Loc. = IOC_X1_Y19_N2; Fanout = 2; COMB Node = 'GPIO[6]~1'
+        Info: 3: + IC(6.879 ns) + CELL(0.370 ns) = 8.263 ns; Loc. = LCCOMB_X23_Y11_N18; Fanout = 1; COMB Node = 'adc_spi_controller:u4|always2~1'
+        Info: 4: + IC(0.366 ns) + CELL(0.202 ns) = 8.831 ns; Loc. = LCCOMB_X23_Y11_N12; Fanout = 1; COMB Node = 'adc_spi_controller:u4|transmit_en~2'
+        Info: 5: + IC(0.000 ns) + CELL(0.108 ns) = 8.939 ns; Loc. = LCFF_X23_Y11_N13; Fanout = 6; REG Node = 'adc_spi_controller:u4|transmit_en'
+        Info: Total cell delay = 1.694 ns ( 18.95 % )
+        Info: Total interconnect delay = 7.245 ns ( 81.05 % )
+    Info: + Micro setup delay of destination is -0.040 ns
+    Info: - Shortest clock path from clock "CLOCK_50" to destination register is 2.832 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.140 ns) = 1.140 ns; Loc. = PIN_23; Fanout = 2; CLK Node = 'CLOCK_50'
+        Info: 2: + IC(0.139 ns) + CELL(0.000 ns) = 1.279 ns; Loc. = CLKCTRL_G2; Fanout = 168; COMB Node = 'CLOCK_50~clkctrl'
+        Info: 3: + IC(0.887 ns) + CELL(0.666 ns) = 2.832 ns; Loc. = LCFF_X23_Y11_N13; Fanout = 6; REG Node = 'adc_spi_controller:u4|transmit_en'
+        Info: Total cell delay = 1.806 ns ( 63.77 % )
+        Info: Total interconnect delay = 1.026 ns ( 36.23 % )
+Info: tco from clock "CLOCK_50" to destination pin "COM[2]" through register "SEG7_Driver:u1|oCOM[5]" is 10.841 ns
+    Info: + Longest clock path from clock "CLOCK_50" to source register is 5.015 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.140 ns) = 1.140 ns; Loc. = PIN_23; Fanout = 2; CLK Node = 'CLOCK_50'
+        Info: 2: + IC(0.522 ns) + CELL(0.970 ns) = 2.632 ns; Loc. = LCFF_X1_Y9_N29; Fanout = 2; REG Node = 'SEG7_Driver:u1|mSCAN_CLK'
+        Info: 3: + IC(0.805 ns) + CELL(0.000 ns) = 3.437 ns; Loc. = CLKCTRL_G1; Fanout = 11; COMB Node = 'SEG7_Driver:u1|mSCAN_CLK~clkctrl'
+        Info: 4: + IC(0.912 ns) + CELL(0.666 ns) = 5.015 ns; Loc. = LCFF_X24_Y5_N21; Fanout = 1; REG Node = 'SEG7_Driver:u1|oCOM[5]'
+        Info: Total cell delay = 2.776 ns ( 55.35 % )
+        Info: Total interconnect delay = 2.239 ns ( 44.65 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Longest register to pin delay is 5.522 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X24_Y5_N21; Fanout = 1; REG Node = 'SEG7_Driver:u1|oCOM[5]'
+        Info: 2: + IC(2.256 ns) + CELL(3.266 ns) = 5.522 ns; Loc. = PIN_75; Fanout = 0; PIN Node = 'COM[2]'
+        Info: Total cell delay = 3.266 ns ( 59.15 % )
+        Info: Total interconnect delay = 2.256 ns ( 40.85 % )
+Info: th for register "adc_spi_controller:u4|madc_out" (data pin = "GPIO[7]", clock pin = "CLOCK_50") is -5.062 ns
+    Info: + Longest clock path from clock "CLOCK_50" to destination register is 2.830 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.140 ns) = 1.140 ns; Loc. = PIN_23; Fanout = 2; CLK Node = 'CLOCK_50'
+        Info: 2: + IC(0.139 ns) + CELL(0.000 ns) = 1.279 ns; Loc. = CLKCTRL_G2; Fanout = 168; COMB Node = 'CLOCK_50~clkctrl'
+        Info: 3: + IC(0.885 ns) + CELL(0.666 ns) = 2.830 ns; Loc. = LCFF_X21_Y11_N9; Fanout = 2; REG Node = 'adc_spi_controller:u4|madc_out'
+        Info: Total cell delay = 1.806 ns ( 63.82 % )
+        Info: Total interconnect delay = 1.024 ns ( 36.18 % )
+    Info: + Micro hold delay of destination is 0.306 ns
+    Info: - Shortest pin to register delay is 8.198 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = PIN_206; Fanout = 1; PIN Node = 'GPIO[7]'
+        Info: 2: + IC(0.000 ns) + CELL(1.004 ns) = 1.004 ns; Loc. = IOC_X1_Y19_N1; Fanout = 1; COMB Node = 'GPIO[7]~0'
+        Info: 3: + IC(6.880 ns) + CELL(0.206 ns) = 8.090 ns; Loc. = LCCOMB_X21_Y11_N8; Fanout = 1; COMB Node = 'adc_spi_controller:u4|madc_out~feeder'
+        Info: 4: + IC(0.000 ns) + CELL(0.108 ns) = 8.198 ns; Loc. = LCFF_X21_Y11_N9; Fanout = 2; REG Node = 'adc_spi_controller:u4|madc_out'
+        Info: Total cell delay = 1.318 ns ( 16.08 % )
+        Info: Total interconnect delay = 6.880 ns ( 83.92 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 141 megabytes
+    Info: Processing ended: Thu Mar 10 15:11:49 2011
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

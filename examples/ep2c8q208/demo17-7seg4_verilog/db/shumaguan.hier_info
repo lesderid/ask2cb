@@ -1,0 +1,36 @@
+|shumaguan
+clk => div_clk.CLK
+clk => count[15].CLK
+clk => count[14].CLK
+clk => count[13].CLK
+clk => count[12].CLK
+clk => count[11].CLK
+clk => count[10].CLK
+clk => count[9].CLK
+clk => count[8].CLK
+clk => count[7].CLK
+clk => count[6].CLK
+clk => count[5].CLK
+clk => count[4].CLK
+clk => count[3].CLK
+clk => count[2].CLK
+clk => count[1].CLK
+clk => count[0].CLK
+dataout[0] <= dataout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataout[1] <= dataout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataout[2] <= dataout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataout[3] <= dataout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataout[4] <= dataout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataout[5] <= dataout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataout[6] <= dataout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataout[7] <= dataout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+en[0] <= en[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+en[1] <= en[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+en[2] <= en[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+en[3] <= en[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+en[4] <= en[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+en[5] <= en[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+en[6] <= en[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+en[7] <= en[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

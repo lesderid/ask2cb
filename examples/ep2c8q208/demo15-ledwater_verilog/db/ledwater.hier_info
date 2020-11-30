@@ -1,0 +1,38 @@
+|ledwater
+clk => count[25].CLK
+clk => count[24].CLK
+clk => count[23].CLK
+clk => count[22].CLK
+clk => count[21].CLK
+clk => count[20].CLK
+clk => count[19].CLK
+clk => count[18].CLK
+clk => count[17].CLK
+clk => count[16].CLK
+clk => count[15].CLK
+clk => count[14].CLK
+clk => count[13].CLK
+clk => count[12].CLK
+clk => count[11].CLK
+clk => count[10].CLK
+clk => count[9].CLK
+clk => count[8].CLK
+clk => count[7].CLK
+clk => count[6].CLK
+clk => count[5].CLK
+clk => count[4].CLK
+clk => count[3].CLK
+clk => count[2].CLK
+clk => count[1].CLK
+clk => count[0].CLK
+rst => ~NO_FANOUT~
+out[0] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,294 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
+11
+936
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+SEG7_LUT_8
+# storage
+db|display_asix.(1).cnf
+db|display_asix.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+SEG7_LUT_8.v
+f3d2e565b8a89d3b82e27af2b3e3748
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# macro_sequence
+
+# end
+# entity
+SEG7_LUT
+# storage
+db|display_asix.(2).cnf
+db|display_asix.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+SEG7_LUT.v
+55f345917e29c2dacebb8d75bd9f5f20
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# macro_sequence
+
+# end
+# entity
+Reset_Delay
+# storage
+db|display_asix.(5).cnf
+db|display_asix.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Reset_Delay.v
+ea3ffecedd5b32c7b31b9256247493b6
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Reset_Delay:u3
+}
+# macro_sequence
+
+# end
+# entity
+SEG7_Driver
+# storage
+db|display_asix.(6).cnf
+db|display_asix.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+SEG7_Driver.v
+2de6ba457f3895c2ab63d9c9531887e0
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+iCLK_Freq
+50000000
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+SEG7_Driver:u1
+}
+# macro_sequence
+
+# end
+# entity
+adc_spi_controller
+# storage
+db|display_asix.(3).cnf
+db|display_asix.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+adc_spi_controller.v
+6424e4bad15d59e694ce65bbe2e4d8a6
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+SYSCLK_FRQ
+50000000
+PARAMETER_SIGNED_DEC
+DEF
+ADC_DCLK_FRQ
+1000
+PARAMETER_SIGNED_DEC
+DEF
+ADC_DCLK_CNT
+25000
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+adc_spi_controller:u4
+}
+# macro_sequence
+
+# end
+# entity
+touch_irq_detector
+# storage
+db|display_asix.(4).cnf
+db|display_asix.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+touch_irq_detector.v
+e8da14647228ba7663534c2ea5683c19
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+TOUCH_CNT_CLEAR
+111111111111111111111111
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# hierarchies {
+touch_irq_detector:u5
+}
+# macro_sequence
+
+# end
+# entity
+display_asix
+# storage
+db|display_asix.(0).cnf
+db|display_asix.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+display_asix.v
+34c8dff85e8738a1f4121ffef0c9ee
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

@@ -1,0 +1,248 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Full Version
+11
+936
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+Reset_Delay
+# storage
+db|dp1_pattern.(3).cnf
+db|dp1_pattern.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Reset_Delay.v
+ea3ffecedd5b32c7b31b9256247493b6
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Reset_Delay:u3
+}
+# macro_sequence
+
+# end
+# entity
+adc_spi_controller
+# storage
+db|dp1_pattern.(1).cnf
+db|dp1_pattern.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+adc_spi_controller.v
+e3e682e84fb33462c8ac106eea94715
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+SYSCLK_FRQ
+50000000
+PARAMETER_SIGNED_DEC
+DEF
+ADC_DCLK_FRQ
+1000
+PARAMETER_SIGNED_DEC
+DEF
+ADC_DCLK_CNT
+25000
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+adc_spi_controller:u4
+}
+# macro_sequence
+
+# end
+# entity
+touch_irq_detector
+# storage
+db|dp1_pattern.(2).cnf
+db|dp1_pattern.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+touch_irq_detector.v
+4dd2c62d40d0d5fbc5cd55a898183249
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+TOUCH_CNT_CLEAR
+111111111111111111111111
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# hierarchies {
+touch_irq_detector:u5
+}
+# macro_sequence
+
+# end
+# entity
+dp1_pattern
+# storage
+db|dp1_pattern.(0).cnf
+db|dp1_pattern.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+dp1_pattern.v
+5cd5e7a64d1a0f6b2f2f16841143a
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+lcd_timing_controller
+# storage
+db|dp1_pattern.(4).cnf
+db|dp1_pattern.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+lcd_timing_controller.v
+e095c45e7e3a68c782d6dd7e52f07ddb
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+H_LINE
+525
+PARAMETER_SIGNED_DEC
+DEF
+V_LINE
+286
+PARAMETER_SIGNED_DEC
+DEF
+Hsync_Blank
+43
+PARAMETER_SIGNED_DEC
+DEF
+Hsync_Front_Porch
+2
+PARAMETER_SIGNED_DEC
+DEF
+Vertical_Back_Porch
+2
+PARAMETER_SIGNED_DEC
+DEF
+Vertical_Front_Porch
+2
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+lcd_timing_controller:u6
+}
+# macro_sequence
+
+# end
+# complete
+

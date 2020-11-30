@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Aug 30 01:56:14 2010
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Full Version
+Revision Name : seg2
+Top-level Entity Name : seg2
+Family : Cyclone II
+Device : EP2C5Q208C8
+Timing Models : Final
+Total logic elements : 30 / 4,608 ( < 1 % )
+    Total combinational functions : 30 / 4,608 ( < 1 % )
+    Dedicated logic registers : 16 / 4,608 ( < 1 % )
+Total registers : 16
+Total pins : 18 / 142 ( 13 % )
+Total virtual pins : 0
+Total memory bits : 0 / 119,808 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 26 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

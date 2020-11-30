@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Aug 17 02:11:19 2010
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Full Version
+Revision Name : ps2_1
+Top-level Entity Name : ps2_1
+Family : Cyclone II
+Device : EP2C5Q208C8
+Timing Models : Final
+Total logic elements : 89 / 4,608 ( 2 % )
+    Total combinational functions : 64 / 4,608 ( 1 % )
+    Dedicated logic registers : 46 / 4,608 ( < 1 % )
+Total registers : 46
+Total pins : 15 / 142 ( 11 % )
+Total virtual pins : 0
+Total memory bits : 0 / 119,808 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 26 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )
